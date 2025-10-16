@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiteofRenaissance™ - Sovereign Ritual</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="seal">∅SB⟣</div>
+            <h1>RiteofRenaissance™</h1>
+            <p class="tagline">A Sovereign Ritual to Reclaim Your Autonomy</p>
+        </header>
+
+        <section class="intro">
+            <h2>What belief costs you the most and gives you nothing back?</h2>
+            <p>Most people never ask. But once you do, everything changes.</p>
+            <p class="highlight">This is not therapy. Not coaching. Not another self-help formula.</p>
+            <p>This is a <strong>sovereign ritual</strong> - a structured confrontation with the invisible chains you never chose.</p>
+        </section>
+
+        <section class="ritual">
+            <h2>The Initial Ritual: Three Questions</h2>
+            <p class="instruction">Answer with total honesty. No one judges here except your own sovereignty.</p>
+
+            <form id="ritualForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="question">
+                    <label for="q1">
+                        <span class="number">1.</span> What belief/doctrine imposes the highest existential cost on you without any return?
+                    </label>
+                    <textarea 
+                        id="q1" 
+                        name="question_1" 
+                        rows="5" 
+                        placeholder="Write without filters. This space is yours."
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="q2">
+                        <span class="number">2.</span> What concrete sacrifice are you willing to make to free yourself from it?
+                    </label>
+                    <textarea 
+                        id="q2" 
+                        name="question_2" 
+                        rows="5" 
+                        placeholder="Not a theory. A real action."
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="q3">
+                        <span class="number">3.</span> What is the smallest symbolic act you will perform in the next 24 hours?
+                    </label>
+                    <textarea 
+                        id="q3" 
+                        name="question_3" 
+                        rows="5" 
+                        placeholder="Something small, concrete, immediate."
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="question">
+                    <label for="email">
+                        Your Email (to receive the continuation of the ritual)
+                    </label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="your@email.com"
+                        required
+                    />
+                </div>
+
+                <button type="submit" class="submit-btn">Submit My Ritual</button>
+            </form>
+        </section>
+
+        <section class="info">
+            <h3>What happens next?</h3>
+            <ul>
+                <li>You will receive the <strong>full ritual protocol</strong> (9 days, 9 dimensions)</li>
+                <li>Access to the <strong>closed sovereign community</strong></li>
+                <li>Real-time tracking of your transformation</li>
+            </ul>
+            <p class="warning">⚠️ Limited to <strong>25 participants only</strong>. This is not a mass product.</p>
+        </section>
+
+        <footer>
+            <p>∅SB⟣ RiteofRenaissance™</p>
+            <p>Contact: <a href="mailto:riteofrenaissance@gmail.com">riteofrenaissance@gmail.com</a></p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('ritualForm').addEventListener('submit', function(e) {
+            // Form will be handled by Formspree
+            alert('Your ritual has been submitted. Check your email for the next steps.');
+        });
+    </script>
+</body>
+</html>
