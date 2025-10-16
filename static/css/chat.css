@@ -1,0 +1,126 @@
+.chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background: #2d2d2d;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #444;
+}
+
+.chat-header h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.user-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #00ff00;
+    margin-top: 0.5rem;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    background: #00ff00;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background: #0f0f0f;
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.system-message {
+    background: #2d2d2d;
+    color: #ccc;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.user-message {
+    background: #0066cc;
+    color: white;
+    margin-left: auto;
+}
+
+.bot-message {
+    background: #333;
+    color: #fff;
+    margin-right: auto;
+}
+
+.chat-input {
+    padding: 1rem;
+    background: #2d2d2d;
+    border-top: 1px solid #444;
+    display: flex;
+    gap: 0.5rem;
+}
+
+#messageInput {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #1a1a1a;
+    color: #fff;
+    resize: none;
+}
+
+#sendButton {
+    padding: 0.75rem 1.5rem;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #2d2d2d;
+    border-top: 1px solid #444;
+}
+
+.nav-btn {
+    padding: 0.5rem 1rem;
+    background: #444;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: #0066cc;
+}
