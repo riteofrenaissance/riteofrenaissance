@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدردشة الآمنة - Rite of Renaissance</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>💬 الدردشة الآمنة</h1>
+            <div class="user-status">
+                <span class="status-indicator"></span>
+                <span>متصلة</span>
+            </div>
+        </header>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message system-message">
+                <p>مرحباً! أنت متصل في الدردشة الآمنة.</p>
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <textarea id="messageInput" placeholder="اكتب رسالتك هنا..." rows="2"></textarea>
+            <button id="sendButton">إرسال</button>
+        </div>
+
+        <nav class="chat-nav">
+            <a href="index.html" class="nav-btn">🏠 الرئيسية</a>
+            <a href="dashboard.html" class="nav-btn">📊 لوحة التحكم</a>
+        </nav>
+    </div>
+
+    <script src="static/js/chat.js"></script>
+</body>
+</html>
