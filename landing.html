@@ -22,26 +22,93 @@
             font-family: 'Cinzel', serif;
             color: var(--gold);
             font-size: 2.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+        }
+        .ritual-subtitle {
+            color: var(--light);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.8;
         }
         .ritual-question {
             background: rgba(212, 175, 55, 0.05);
             padding: 30px;
-            margin: 20px 0;
+            margin: 25px 0;
             border-radius: 8px;
             border-left: 4px solid var(--gold);
             text-align: left;
+            transition: all 0.3s ease;
         }
-        .home-link {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 24px;
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid var(--gold);
-            border-radius: 8px;
+        .ritual-question:hover {
+            background: rgba(212, 175, 55, 0.08);
+            transform: translateX(5px);
+        }
+        .question-text {
+            font-family: 'Cinzel', serif;
             color: var(--gold);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        .question-instruction {
+            font-style: italic;
+            color: var(--light);
+            opacity: 0.7;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        .home-link, .submit-btn {
+            display: inline-block;
+            margin: 15px;
+            padding: 15px 30px;
+            border-radius: 8px;
             text-decoration: none;
             font-family: 'Cinzel', serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1.1rem;
+        }
+        .home-link {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary) 0%, #247d4a 100%);
+            border: 2px solid var(--gold);
+            color: var(--light);
+            box-shadow: 0 5px 20px rgba(46, 139, 87, 0.4);
+        }
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6);
+            background: linear-gradient(135deg, #247d4a 0%, var(--primary) 100%);
+        }
+        textarea {
+            width: 100%;
+            height: 120px;
+            margin-top: 15px;
+            background: rgba(245, 245, 220, 0.1);
+            border: 1px solid var(--gold);
+            color: var(--light);
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            resize: vertical;
+            transition: all 0.3s ease;
+        }
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 10px rgba(46, 139, 87, 0.3);
+        }
+        .form-notice {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid rgba(212, 175, 55, 0.3);
         }
     </style>
 </head>
@@ -60,28 +127,68 @@
         </header>
 
         <div class="ritual-container">
-            <div class="ritual-question">
-                <h2>1. What belief/doctrine imposes the highest existential cost on you without any return?</h2>
-                <p><em>Write without filters. This space is yours.</em></p>
-                <textarea style="width: 100%; height: 100px; margin-top: 15px; background: rgba(245, 245, 220, 0.1); border: 1px solid var(--gold); color: var(--light); padding: 10px;"></textarea>
+            <h2 class="ritual-title">The Sovereign Initiation</h2>
+            <p class="ritual-subtitle">25 beating hearts only - no spectators, no spiritual tourists</p>
+            
+            <div class="form-notice">
+                <p style="color: var(--gold); font-family: 'Cinzel', serif; margin-bottom: 10px;">Ready to act? Answer 3 questions.</p>
+                <p style="font-size: 0.95rem; opacity: 0.8;">* Only 25 participants will be selected based on the depth of responses</p>
             </div>
 
-            <div class="ritual-question">
-                <h2>2. What concrete sacrifice are you willing to make to free yourself from it?</h2>
-                <p><em>Not a theory. A real action.</em></p>
-                <textarea style="width: 100%; height: 100px; margin-top: 15px; background: rgba(245, 245, 220, 0.1); border: 1px solid var(--gold); color: var(--light); padding: 10px;"></textarea>
-            </div>
+            <form id="ritualForm" action="https://formsubmit.co/riteofrenaissance@gmail.com" method="POST">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="New Ritual Submission - Sovereign Initiation">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="ritual-question">
+                    <div class="question-text">Question 1: Awareness *</div>
+                    <div class="question-instruction">
+                        What belief/doctrine (idea, or emotional commitment) do you see today that imposes the highest existential cost on you (of your energy and time), without any real return in your life?
+                    </div>
+                    <textarea name="Question_1_Awareness" placeholder="Share your truth..." required></textarea>
+                </div>
 
-            <div class="ritual-question">
-                <h2>3. What will you build in the space that this sacrifice creates?</h2>
-                <p><em>Your legacy begins here.</em></p>
-                <textarea style="width: 100%; height: 100px; margin-top: 15px; background: rgba(245, 245, 220, 0.1); border: 1px solid var(--gold); color: var(--light); padding: 10px;"></textarea>
-            </div>
+                <div class="ritual-question">
+                    <div class="question-text">Question 2: Will *</div>
+                    <div class="question-instruction">
+                        What concrete sacrifice, which may be painful or annoying, are you willing to make today to free yourself from the grip of this belief/doctrine you identified in Question 1?
+                    </div>
+                    <textarea name="Question_2_Will" placeholder="Describe your commitment..." required></textarea>
+                </div>
 
-            <a href="./index.html" class="home-link">← Return to Portal</a>
+                <div class="ritual-question">
+                    <div class="question-text">Question 3: Practice (And Now?) *</div>
+                    <div class="question-instruction">
+                        In light of your previous answer, what is the smallest and most immediate symbolic action you will take in the next 24 hours to "affirm your will" and build a physical bridge between your decision and your reality?
+                    </div>
+                    <textarea name="Question_3_Practice" placeholder="Envision your creation..." required></textarea>
+                </div>
+
+                <!-- Optional Contact Info -->
+                <div class="ritual-question" style="background: rgba(46, 139, 87, 0.08); border-left-color: var(--primary);">
+                    <div class="question-text">Contact Information (Optional)</div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+                        <input type="text" name="name" placeholder="Your Name" 
+                               style="padding: 12px; background: rgba(245, 245, 220, 0.1); border: 1px solid var(--primary); border-radius: 5px; color: var(--light);">
+                        <input type="email" name="email" placeholder="Your Email" 
+                               style="padding: 12px; background: rgba(245, 245, 220, 0.1); border: 1px solid var(--primary); border-radius: 5px; color: var(--light);">
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <button type="submit" class="submit-btn">
+                        🚀 I Am Ready - Submit to Sovereign Archive
+                    </button>
+                </div>
+            </form>
+
+            <div style="margin-top: 30px;">
+                <a href="./index.html" class="home-link">← Return to Main Portal</a>
+            </div>
         </div>
 
-        <!-- Footer الموحد -->
+        <!-- Unified Footer -->
         <footer style="text-align: center; margin-top: 50px; padding: 30px; border-top: 1px solid #D4AF37;">
             <a href="https://riteofrenaissance.github.io/riteofrenaissance/" 
                style="color: #D4AF37; text-decoration: none; font-family: 'Cinzel', serif; font-size: 1.1rem;">
@@ -89,5 +196,33 @@
             </a>
         </footer>
     </div>
+
+    <script>
+        document.getElementById('ritualForm').addEventListener('submit', function(e) {
+            // Basic validation
+            const textareas = this.querySelectorAll('textarea[required]');
+            let allFilled = true;
+            
+            textareas.forEach(textarea => {
+                if (!textarea.value.trim()) {
+                    allFilled = false;
+                    textarea.style.borderColor = '#ff6b6b';
+                } else {
+                    textarea.style.borderColor = 'var(--gold)';
+                }
+            });
+            
+            if (!allFilled) {
+                e.preventDefault();
+                alert('Please answer all three questions before submitting.');
+                return;
+            }
+            
+            // Optional: Add loading state
+            const submitBtn = this.querySelector('.submit-btn');
+            submitBtn.innerHTML = '⏳ Submitting...';
+            submitBtn.disabled = true;
+        });
+    </script>
 </body>
 </html>
