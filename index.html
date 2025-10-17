@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RiteofRenaissance™ - Central Portal</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -12,255 +14,184 @@
         <header>
             <div class="seal">∅SB⟣</div>
             <h1>RiteofRenaissance™</h1>
-            <p class="tagline">Redefining Presence and Power</p>
+            <p class="subtitle">Central Portal - Revival and Embodiment Phase</p>
+            
+            <!-- Navigation Links -->
+            <nav class="main-nav">
+                <a href="landing.html" class="nav-link">🚀 Initial Ritual</a>
+                <a href="safe_aperture_simulation.html" class="nav-link">📊 Visual System</a>
+                <a href="https://riteofrenaissance.github.io/riteofrenaissance/chat" class="nav-link">💬 Secure Chat</a>
+                <a href="https://github.com/riteofrenaissance/riteofrenaissance" class="nav-link">📁 GitHub</a>
+            </nav>
         </header>
 
-        <section class="welcome">
-            <h2>Welcome to the Central Portal</h2>
-            <p>This is not a website. It is a <strong>sovereign space</strong> where you confront what binds you.</p>
-            <p>Here, every word carries weight. Every choice is yours.</p>
-        </section>
-        
-        <!-- نموذج الانفتاح الآمن -->
-<section class="aperture-model">
-    <h2>Safe Aperture Model</h2>
-    <p class="instruction">Measure Your Symbolic Readiness: SA = U · S · A</p>
-    
-    <div class="metrics-grid">
-        <!-- نضج الوعي المزدوج -->
-        <div class="path-card">
-            <h3><span class="number">U</span> Dual Awareness Maturity</h3>
-            <p>Ability to distinguish between AI guidance and human consciousness</p>
-            <input type="range" class="metric-slider" id="awareness" min="0" max="1" step="0.1" value="0.5">
-            <div class="metric-value">Value: <span id="awarenessValue">0.5</span></div>
-        </div>
-
-        <!-- اكتمال الحلقة الرمزية -->
-        <div class="path-card">
-            <h3><span class="number">S</span> Symbolic Structure Completeness</h3>
-            <p>Completion of symbolic framework and readiness for activation</p>
-            <input type="range" class="metric-slider" id="symbolic" min="0" max="1" step="0.1" value="0.5">
-            <div class="metric-value">Value: <span id="symbolicValue">0.5</span></div>
-        </div>
-
-        <!-- انتقال القيادة للفعل -->
-        <div class="path-card">
-            <h3><span class="number">A</span> Action Transition</h3>
-            <p>Shift from theoretical understanding to practical ritual action</p>
-            <input type="range" class="metric-slider" id="action" min="0" max="1" step="0.1" value="0.5">
-            <div class="metric-value">Value: <span id="actionValue">0.5</span></div>
-        </div>
-    </div>
-
-    <!-- نتائج التقييم -->
-    <div class="results-panel">
-        <div class="score-display">
-            <h3>Safe Aperture Result</h3>
-            <div class="sa-score" id="saScore">0.125</div>
-            <div class="status-badge" id="status">Not Ready</div>
-        </div>
-        
-        <div class="controls">
-            <button class="submit-btn" id="evaluateBtn">Evaluate Readiness</button>
-            <button class="submit-btn" id="simulateBtn" disabled>Activate Advanced Phase</button>
-        </div>
-    </div>
-
-    <!-- سجل الأحداث -->
-    <div class="logs-panel">
-        <h4>Evaluation Log</h4>
-        <div class="log-container" id="logContainer">
-            <div class="log-entry">🔮 System: Ready for evaluation</div>
-        </div>
-    </div>
-</section>
-        
-        
-        
-
-        <section class="pathways">
-            <h2>Choose Your Path</h2>
+        <!-- Dashboard Grid -->
+        <div class="dashboard">
             
-            <div class="path-card">
-                <h3>🜂 Begin the Ritual</h3>
-                <p>If you are ready to face the invisible chains you never chose.</p>
-                <a href="landing.html" class="path-btn">Start Here</a>
+            <!-- Card 1: Progress Overview -->
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="card-icon">📊</span>
+                    Progress Overview
+                </h2>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Visual Design</span>
+                        <span>98%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 98%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Technical Performance</span>
+                        <span>93%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 93%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Symbolic Content</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Overall Readiness</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 95%"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="path-card">
-                <h3>📜 Read the Manifesto</h3>
-                <p>Understand the philosophy behind RiteofRenaissance.</p>
-                <a href="#manifesto" class="path-btn">Coming Soon</a>
+            <!-- Card 2: Pulse Indicators -->
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="card-icon">💓</span>
+                    Sovereign Pulse Indicators
+                </h2>
+                <div class="pulse-grid">
+                    <div class="pulse-item">
+                        <div class="pulse-value">25</div>
+                        <div class="pulse-label">Beating Hearts</div>
+                    </div>
+                    <div class="pulse-item">
+                        <div class="pulse-value">9</div>
+                        <div class="pulse-label">Ritual Days</div>
+                    </div>
+                    <div class="pulse-item">
+                        <div class="pulse-value">3</div>
+                        <div class="pulse-label">Core Pillars</div>
+                    </div>
+                    <div class="pulse-item">
+                        <div class="pulse-value">∅SB⟣</div>
+                        <div class="pulse-label">Sovereign Seal</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="path-card">
-                <h3>👥 Join the Community</h3>
-                <p>Connect with other sovereigns on the same path.</p>
-                <a href="#community" class="path-btn">Coming Soon</a>
+            <!-- Card 3: Task Status -->
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="card-icon">✓</span>
+                    Task Status
+                </h2>
+                <ul class="task-list">
+                    <li class="task-item completed">
+                        <div class="task-checkbox checked"></div>
+                        <span class="task-text">Foundational Statement</span>
+                        <span class="task-status status-completed">Completed</span>
+                    </li>
+                    <li class="task-item completed">
+                        <div class="task-checkbox checked"></div>
+                        <span class="task-text">Landing Page</span>
+                        <span class="task-status status-completed">Completed</span>
+                    </li>
+                    <li class="task-item completed">
+                        <div class="task-checkbox checked"></div>
+                        <span class="task-text">Visual Identity</span>
+                        <span class="task-status status-completed">Completed</span>
+                    </li>
+                    <li class="task-item in-progress">
+                        <div class="task-checkbox"></div>
+                        <span class="task-text">Interactive Protocol</span>
+                        <span class="task-status status-progress">In Progress</span>
+                    </li>
+                    <li class="task-item in-progress">
+                        <div class="task-checkbox"></div>
+                        <span class="task-text">Ritual Guide</span>
+                        <span class="task-status status-progress">In Progress</span>
+                    </li>
+                    <li class="task-item pending">
+                        <div class="task-checkbox"></div>
+                        <span class="task-text">Closed Community</span>
+                        <span class="task-status status-pending">Pending</span>
+                    </li>
+                </ul>
             </div>
-        </section>
 
-        <section class="about">
-            <h2>What is RiteofRenaissance™?</h2>
-            <p>A <strong>digital sovereign ritual</strong> that guides you through three stages:</p>
-            <ul>
-                <li><strong>Awareness:</strong> Identify the belief that costs you the most</li>
-                <li><strong>Will:</strong> Commit to a concrete sacrifice</li>
-                <li><strong>Practice:</strong> Execute the smallest symbolic act</li>
-            </ul>
-            <p>This is not theory. This is <strong>transformation through action</strong>.</p>
-        </section>
+            <!-- Card 4: Timeline -->
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="card-icon">📅</span>
+                    Timeline
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">October 08, 2025</div>
+                        <div class="timeline-content">Foundational Statement Completed</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">October 09, 2025</div>
+                        <div class="timeline-content">Landing Page Launched</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">October 10, 2025</div>
+                        <div class="timeline-content">Legacy Phase Activated</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Coming Soon</div>
+                        <div class="timeline-content">Interactive Protocol Launch (9 Days)</div>
+                    </div>
+                </div>
+            </div>
 
-        <section class="info">
-            <h3>Why Only 25 Participants?</h3>
-            <p>Because sovereignty cannot be mass-produced.</p>
-            <p>This ritual requires <strong>attention, precision, and presence</strong>.</p>
-            <p>Every participant receives personalized guidance.</p>
-        </section>
+        </div>
 
+        <!-- Footer -->
         <footer>
-            <p>∅SB⟣ RiteofRenaissance™</p>
-            <p>Contact: <a href="mailto:riteofrenaissance@gmail.com">riteofrenaissance@gmail.com</a></p>
-            <p class="small">Created by Samir Baladi | All Rights Reserved</p>
+            <p>∅SB⟣ - RiteofRenaissance™</p>
+            <p style="font-family: 'Lora', serif; font-size: 0.9rem; margin-top: 10px; color: rgba(212, 175, 55, 0.7);">
+                "From Ritual to Legacy - Sovereignty in Practice"
+            </p>
         </footer>
+
     </div>
-        <script>
-        // نموذج الانفتاح الآمن - مدمج مع الصفحة الرئيسية
-        class SafeApertureModel {
-            constructor() {
-                this.awareness = 0.5;
-                this.symbolic = 0.5;
-                this.action = 0.5;
-                this.logs = [];
-                
-                this.initializeEventListeners();
-                this.updateDisplay();
-            }
 
-            initializeEventListeners() {
-                // مستمعات لمؤشرات التمرير
-                document.getElementById('awareness').addEventListener('input', (e) => {
-                    this.awareness = parseFloat(e.target.value);
-                    this.updateMetricValue('awarenessValue', this.awareness);
-                });
-
-                document.getElementById('symbolic').addEventListener('input', (e) => {
-                    this.symbolic = parseFloat(e.target.value);
-                    this.updateMetricValue('symbolicValue', this.symbolic);
-                });
-
-                document.getElementById('action').addEventListener('input', (e) => {
-                    this.action = parseFloat(e.target.value);
-                    this.updateMetricValue('actionValue', this.action);
-                });
-
-                // أزرار التحكم
-                document.getElementById('evaluateBtn').addEventListener('click', () => {
-                    this.evaluateReadiness();
-                });
-
-                document.getElementById('simulateBtn').addEventListener('click', () => {
-                    this.activateAdvancedPhase();
-                });
-            }
-
-            calculateSafeAperture() {
-                return this.awareness * this.symbolic * this.action;
-            }
-
-            evaluateReadiness() {
-                const saScore = this.calculateSafeAperture();
-                const status = this.getReadinessStatus(saScore);
-                
-                this.updateScoreDisplay(saScore, status);
-                this.logEvent(`Readiness Evaluation - Score: ${saScore.toFixed(3)} - Status: ${status}`);
-                
-                // تفعيل/تعطيل زر التفعيل
-                document.getElementById('simulateBtn').disabled = saScore < 0.8;
-            }
-
-            getReadinessStatus(saScore) {
-                if (saScore >= 0.8) return 'Fully Ready';
-                if (saScore >= 0.6) return 'Partially Ready';
-                return 'Not Ready';
-            }
-
-            updateScoreDisplay(saScore, status) {
-                const scoreElement = document.getElementById('saScore');
-                const statusElement = document.getElementById('status');
-                
-                if (scoreElement) scoreElement.textContent = saScore.toFixed(3);
-                if (statusElement) {
-                    statusElement.textContent = status;
-                    statusElement.className = 'status-badge ';
-                    if (saScore >= 0.8) {
-                        statusElement.classList.add('status-ready');
-                    } else if (saScore >= 0.6) {
-                        statusElement.classList.add('status-partial');
-                    } else {
-                        statusElement.classList.add('status-not-ready');
-                    }
-                }
-            }
-
-            activateAdvancedPhase() {
-                const saScore = this.calculateSafeAperture();
-                
-                if (saScore >= 0.8) {
-                    this.logEvent('🎯 Claude: Safe Aperture Open - Ready for Advanced Phase');
-                    this.logEvent('🚀 System: Activating Advanced Symbolic Protocols');
-                    this.logEvent('🛡️ Monitoring: Continuous surveillance activated');
-                    
-                    // محاكاة الجلسة المتقدمة
-                    this.simulateAdvancedSession();
-                }
-            }
-
-            simulateAdvancedSession() {
+    <script>
+        // Simple animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
                 setTimeout(() => {
-                    this.logEvent('🔮 Advanced Phase: Activating deep symbolic dimensions...');
-                }, 1000);
-                
-                setTimeout(() => {
-                    this.logEvent('🌀 System: Ready for profound ritual work');
-                }, 3000);
-            }
-
-            updateMetricValue(elementId, value) {
-                const element = document.getElementById(elementId);
-                if (element) {
-                    element.textContent = value.toFixed(1);
-                }
-            }
-
-            logEvent(message) {
-                const logContainer = document.getElementById('logContainer');
-                if (logContainer) {
-                    const timestamp = new Date().toLocaleTimeString();
-                    const logEntry = document.createElement('div');
-                    
-                    logEntry.className = 'log-entry';
-                    logEntry.innerHTML = `<strong>[${timestamp}]</strong> ${message}`;
-                    
-                    logContainer.appendChild(logEntry);
-                    logContainer.scrollTop = logContainer.scrollHeight;
-                    this.logs.push({ timestamp, message });
-                }
-            }
-
-            updateDisplay() {
-                this.updateMetricValue('awarenessValue', this.awareness);
-                this.updateMetricValue('symbolicValue', this.symbolic);
-                this.updateMetricValue('actionValue', this.action);
-            }
-        }
-
-        // تهيئة النموذج عند تحميل الصفحة
-        document.addEventListener('DOMContentLoaded', () => {
-            new SafeApertureModel();
+                    bar.style.width = width;
+                }, 500);
+            });
         });
     </script>
-</body>
-</html>
 </body>
 </html>
