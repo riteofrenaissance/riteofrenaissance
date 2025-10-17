@@ -15,7 +15,7 @@
         <header>
             <div class="seal">∅SB⟣</div>
             <h1>Safe Aperture Simulation</h1>
-            <p class="subtitle">Visual Representation of Sovereign Metrics</p>
+            <p class="subtitle">Sovereign Metrics Visualization</p>
             
             <nav class="main-nav">
                 <a href="./index.html" class="nav-link">🏠 Main Portal</a>
@@ -25,86 +25,96 @@
             </nav>
         </header>
 
-        <div class="simulation-container">
-            <!-- لوحة المقاييس -->
-            <div class="metrics-panel">
-                <div class="metric-card">
-                    <div class="metric-value" id="dualAwareness">1.0</div>
-                    <div class="metric-label">Dual Awareness</div>
+        <main class="main-content">
+            <div class="simulation-container">
+                <!-- Metrics Panel -->
+                <div class="metrics-panel">
+                    <div class="metric-card">
+                        <div class="metric-value" id="dualAwareness">1.0</div>
+                        <div class="metric-label">Dual Awareness</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="strictTransitive">0.8</div>
+                        <div class="metric-label">Strictly Transitive</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="readinessThreshold">0.9</div>
+                        <div class="metric-label">Readiness Threshold</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value" id="sovereignIntegrity">0.7</div>
+                        <div class="metric-label">Sovereign Integrity</div>
+                    </div>
                 </div>
-                <div class="metric-card">
-                    <div class="metric-value" id="strictTransitive">0.8</div>
-                    <div class="metric-label">Strictly Transitive</div>
+
+                <!-- Visual Representation -->
+                <div class="visualization-area">
+                    <h2 class="visual-title">Aperture Visualization</h2>
+                    
+                    <div class="aperture-visual">
+                        <div class="direction-marker direction-n">N</div>
+                        <div class="direction-marker direction-s">S</div>
+                        <div class="direction-marker direction-e">E</div>
+                        <div class="direction-marker direction-w">W</div>
+                        <div class="aperture-center"></div>
+                    </div>
+                    
+                    <div class="simulation-status">
+                        <p>SANE APERTURE • BENEVOLENCE</p>
+                    </div>
                 </div>
-                <div class="metric-card">
-                    <div class="metric-value" id="readinessThreshold">0.9</div>
-                    <div class="metric-label">Readiness Threshold</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value" id="sovereignIntegrity">0.7</div>
-                    <div class="metric-label">Sovereign Integrity</div>
+
+                <!-- Current Metrics -->
+                <div class="card">
+                    <h2 class="card-title">
+                        <span class="card-icon">📊</span>
+                        Current Metrics
+                    </h2>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Dual Awareness (U)</span>
+                            <span>1.0</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Strictly Transitive (A)</span>
+                            <span>0.8</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>Readiness Threshold</span>
+                            <span>0.9</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </main>
 
-            <!-- التمثيل المرئي -->
-            <div class="visualization-area">
-                <h2 class="section-title">Visual Representation</h2>
-                
-                <div class="aperture-visual">
-                    <div class="aperture-center"></div>
-                </div>
-                
-                <div class="simulation-status">
-                    <p>SANE APERTURE • BENEVOLENCE</p>
-                </div>
-            </div>
-
-            <!-- لوحة التحكم -->
-            <div class="control-panel">
-                <h2 class="section-title">Simulation Controls</h2>
-                
-                <div class="control-group">
-                    <label for="awarenessSlider">Dual Awareness Level</label>
-                    <input type="range" id="awarenessSlider" class="control-slider" min="0" max="1" step="0.1" value="1.0">
-                </div>
-                
-                <div class="control-group">
-                    <label for="transitiveSlider">Strictly Transitive</label>
-                    <input type="range" id="transitiveSlider" class="control-slider" min="0" max="1" step="0.1" value="0.8">
-                </div>
-                
-                <div class="control-group">
-                    <label for="readinessSlider">Readiness Threshold</label>
-                    <input type="range" id="readinessSlider" class="control-slider" min="0" max="1" step="0.1" value="0.9">
-                </div>
-            </div>
-
-            <!-- سجل المحاكاة -->
-            <div class="card">
-                <h2 class="card-title">
-                    <span class="card-icon">📈</span>
-                    Simulation History
-                </h2>
-                <div class="history-log">
-                    <div class="log-entry">[12:00] System initialized - All metrics nominal</div>
-                    <div class="log-entry">[12:01] Dual Awareness calibrated to 1.0</div>
-                    <div class="log-entry">[12:02] Transitive properties verified</div>
-                    <div class="log-entry">[12:03] Readiness threshold established</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- الفوتر -->
+        <!-- Unified Footer at the bottom -->
         <footer class="main-footer">
             <div class="footer-content">
-                <p>&copy; 2025 RiteofRenaissance. All rights reserved.</p>
+                <a href="https://riteofrenaissance.github.io/riteofrenaissance/" 
+                   class="footer-link">
+                    © 2025 RiteofRenaissance
+                </a>
                 <p>Sovereign Benevolence Protocol Active</p>
             </div>
         </footer>
     </div>
 
     <script>
-        // محاكاة تحديث المقاييس
+        // Update metrics simulation
         function updateMetrics() {
             const metrics = ['dualAwareness', 'strictTransitive', 'readinessThreshold', 'sovereignIntegrity'];
             metrics.forEach(metric => {
@@ -118,21 +128,8 @@
             });
         }
 
-        // تحديث المقاييس كل 3 ثواني
+        // Update metrics every 3 seconds
         setInterval(updateMetrics, 3000);
-
-        // التحكم في السلايدرز
-        document.getElementById('awarenessSlider').addEventListener('input', function(e) {
-            document.getElementById('dualAwareness').textContent = e.target.value;
-        });
-
-        document.getElementById('transitiveSlider').addEventListener('input', function(e) {
-            document.getElementById('strictTransitive').textContent = e.target.value;
-        });
-
-        document.getElementById('readinessSlider').addEventListener('input', function(e) {
-            document.getElementById('readinessThreshold').textContent = e.target.value;
-        });
     </script>
 </body>
 </html>
