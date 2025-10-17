@@ -15,7 +15,7 @@
         <header>
             <div class="seal">∅SB⟣</div>
             <h1>Safe Aperture Simulation</h1>
-            <p class="subtitle">Sovereign Metrics Visualization</p>
+            <p class="subtitle">Visual Representation of Sovereign Metrics</p>
             
             <nav class="main-nav">
                 <a href="./index.html" class="nav-link">🏠 Main Portal</a>
@@ -46,64 +46,60 @@
                 </div>
             </div>
 
-            <!-- Current Metrics -->
-            <div class="card">
-                <h2 class="card-title">
-                    <span class="card-icon">📊</span>
-                    Current Metrics
-                </h2>
-                <div class="progress-item">
-                    <div class="progress-label">
-                        <span>Dual Awareness (U)</span>
-                        <span>1.0</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 100%"></div>
-                    </div>
+            <!-- التمثيل المرئي -->
+            <div class="visualization-area">
+                <h2 class="section-title">Visual Representation</h2>
+                
+                <div class="aperture-visual">
+                    <div class="aperture-center"></div>
                 </div>
-                <div class="progress-item">
-                    <div class="progress-label">
-                        <span>Strictly Transitive (A)</span>
-                        <span>0.8</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-label">
-                        <span>Readiness Threshold</span>
-                        <span>0.9</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 90%"></div>
-                    </div>
+                
+                <div class="simulation-status">
+                    <p>SANE APERTURE • BENEVOLENCE</p>
                 </div>
             </div>
 
-            <!-- التمثيل المرئي - في نهاية المحتوى قبل الفوتر -->
-            <div class="visualization-area">
-                <h2 class="visual-title">Visual Representation</h2>
+            <!-- لوحة التحكم -->
+            <div class="control-panel">
+                <h2 class="section-title">Simulation Controls</h2>
                 
-                <div class="aperture-visual">
-                    <div class="direction-marker direction-n">N</div>
-                    <div class="direction-marker direction-s">S</div>
-                    <div class="direction-marker direction-e">E</div>
-                    <div class="direction-marker direction-w">W</div>
+                <div class="control-group">
+                    <label for="awarenessSlider">Dual Awareness Level</label>
+                    <input type="range" id="awarenessSlider" class="control-slider" min="0" max="1" step="0.1" value="1.0">
                 </div>
                 
-                <div style="margin-top: 30px; color: var(--light); opacity: 0.8;">
-                    <p>SANE APERTURE • BENEVOLENCE</p>
+                <div class="control-group">
+                    <label for="transitiveSlider">Strictly Transitive</label>
+                    <input type="range" id="transitiveSlider" class="control-slider" min="0" max="1" step="0.1" value="0.8">
+                </div>
+                
+                <div class="control-group">
+                    <label for="readinessSlider">Readiness Threshold</label>
+                    <input type="range" id="readinessSlider" class="control-slider" min="0" max="1" step="0.1" value="0.9">
+                </div>
+            </div>
+
+            <!-- سجل المحاكاة -->
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="card-icon">📈</span>
+                    Simulation History
+                </h2>
+                <div class="history-log">
+                    <div class="log-entry">[12:00] System initialized - All metrics nominal</div>
+                    <div class="log-entry">[12:01] Dual Awareness calibrated to 1.0</div>
+                    <div class="log-entry">[12:02] Transitive properties verified</div>
+                    <div class="log-entry">[12:03] Readiness threshold established</div>
                 </div>
             </div>
         </div>
 
-        <!-- الفوتر الموحد - دائماً في النهاية -->
-        <footer style="text-align: center; margin-top: 50px; padding: 30px; border-top: 1px solid #D4AF37;">
-            <a href="https://riteofrenaissance.github.io/riteofrenaissance/" 
-               style="color: #D4AF37; text-decoration: none; font-family: 'Cinzel', serif; font-size: 1.1rem;">
-                © 2025 RiteofRenaissance
-            </a>
+        <!-- الفوتر -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <p>&copy; 2025 RiteofRenaissance. All rights reserved.</p>
+                <p>Sovereign Benevolence Protocol Active</p>
+            </div>
         </footer>
     </div>
 
@@ -124,6 +120,19 @@
 
         // تحديث المقاييس كل 3 ثواني
         setInterval(updateMetrics, 3000);
+
+        // التحكم في السلايدرز
+        document.getElementById('awarenessSlider').addEventListener('input', function(e) {
+            document.getElementById('dualAwareness').textContent = e.target.value;
+        });
+
+        document.getElementById('transitiveSlider').addEventListener('input', function(e) {
+            document.getElementById('strictTransitive').textContent = e.target.value;
+        });
+
+        document.getElementById('readinessSlider').addEventListener('input', function(e) {
+            document.getElementById('readinessThreshold').textContent = e.target.value;
+        });
     </script>
 </body>
 </html>
