@@ -15,7 +15,7 @@
         <header>
             <div class="seal">∅SB⟣</div>
             <h1>Safe Aperture Simulation</h1>
-            <p class="subtitle">Interactive Sovereign Metrics Visualization</p>
+            <p class="subtitle">Automated Protocol: U · S · A → Safe Aperture</p>
             
             <nav class="main-nav">
                 <a href="./index.html" class="nav-link">🏠 Main Portal</a>
@@ -27,251 +27,341 @@
 
         <main class="main-content">
             <div class="simulation-container">
-                <!-- Metrics Panel -->
+                <!-- Core Metrics Panel -->
                 <div class="metrics-panel">
-                    <div class="metric-card" data-metric="dualAwareness">
-                        <div class="metric-value" id="dualAwareness">1.0</div>
-                        <div class="metric-label">Dual Awareness</div>
+                    <div class="metric-card" data-metric="awarenessMaturity">
+                        <div class="metric-value" id="awarenessMaturity">0.9</div>
+                        <div class="metric-label">Awareness Maturity (U)</div>
                     </div>
-                    <div class="metric-card" data-metric="strictTransitive">
-                        <div class="metric-value" id="strictTransitive">0.8</div>
-                        <div class="metric-label">Strictly Transitive</div>
+                    <div class="metric-card" data-metric="symbolicCompleteness">
+                        <div class="metric-value" id="symbolicCompleteness">0.8</div>
+                        <div class="metric-label">Symbolic Completeness (S)</div>
                     </div>
-                    <div class="metric-card" data-metric="readinessThreshold">
-                        <div class="metric-value" id="readinessThreshold">0.9</div>
-                        <div class="metric-label">Readiness Threshold</div>
+                    <div class="metric-card" data-metric="actionTransition">
+                        <div class="metric-value" id="actionTransition">0.7</div>
+                        <div class="metric-label">Action Transition (A)</div>
                     </div>
-                    <div class="metric-card" data-metric="sovereignIntegrity">
-                        <div class="metric-value" id="sovereignIntegrity">0.7</div>
-                        <div class="metric-label">Sovereign Integrity</div>
+                    <div class="metric-card metric-card-sa">
+                        <div class="metric-value" id="safeApertureScore">0.50</div>
+                        <div class="metric-label">Safe Aperture (SA)</div>
+                    </div>
+                </div>
+
+                <!-- System Status -->
+                <div class="status-panel">
+                    <div class="status-indicator">
+                        <div class="status-label">System Status</div>
+                        <div class="status-value" id="systemStatus">MONITORING</div>
+                    </div>
+                    <div class="status-indicator">
+                        <div class="status-label">Readiness Level</div>
+                        <div class="status-value" id="readinessLevel">NOT_READY</div>
+                    </div>
+                    <div class="status-indicator">
+                        <div class="status-label">Copilot Status</div>
+                        <div class="status-value" id="copilotStatus">INACTIVE</div>
                     </div>
                 </div>
 
                 <!-- Visual Representation -->
                 <div class="visualization-area">
-                    <h2 class="visual-title">Aperture Visualization</h2>
+                    <h2 class="visual-title">Aperture State Visualization</h2>
                     
                     <div class="aperture-visual" id="aperture">
-                        <div class="direction-marker direction-n">N</div>
+                        <div class="direction-marker direction-n">U</div>
                         <div class="direction-marker direction-s">S</div>
-                        <div class="direction-marker direction-e">E</div>
-                        <div class="direction-marker direction-w">W</div>
-                        <div class="aperture-center"></div>
+                        <div class="direction-marker direction-e">A</div>
+                        <div class="direction-marker direction-w">SA</div>
+                        <div class="aperture-center" id="apertureCenter"></div>
                     </div>
                     
                     <div class="simulation-status">
-                        <p>SANE APERTURE • BENEVOLENCE</p>
+                        <p id="apertureMessage">🌀 Monitoring User Metrics...</p>
                     </div>
                 </div>
 
                 <!-- Control Panel -->
                 <div class="control-panel">
-                    <h2 class="control-title">Simulation Controls</h2>
+                    <h2 class="control-title">Protocol Controls</h2>
                     
                     <div class="control-group">
-                        <label for="awarenessSlider">Dual Awareness Level</label>
-                        <input type="range" id="awarenessSlider" class="control-slider" min="0" max="1" step="0.1" value="1.0">
-                        <span class="slider-value">1.0</span>
+                        <label for="awarenessSlider">Awareness Maturity (U)</label>
+                        <input type="range" id="awarenessSlider" class="control-slider" min="0" max="1" step="0.1" value="0.9">
+                        <span class="slider-value">0.9</span>
                     </div>
                     
                     <div class="control-group">
-                        <label for="transitiveSlider">Strictly Transitive</label>
-                        <input type="range" id="transitiveSlider" class="control-slider" min="0" max="1" step="0.1" value="0.8">
+                        <label for="symbolicSlider">Symbolic Completeness (S)</label>
+                        <input type="range" id="symbolicSlider" class="control-slider" min="0" max="1" step="0.1" value="0.8">
                         <span class="slider-value">0.8</span>
                     </div>
                     
                     <div class="control-group">
-                        <label for="readinessSlider">Readiness Threshold</label>
-                        <input type="range" id="readinessSlider" class="control-slider" min="0" max="1" step="0.1" value="0.9">
-                        <span class="slider-value">0.9</span>
+                        <label for="actionSlider">Action Transition (A)</label>
+                        <input type="range" id="actionSlider" class="control-slider" min="0" max="1" step="0.1" value="0.7">
+                        <span class="slider-value">0.7</span>
                     </div>
 
                     <div class="control-buttons">
-                        <button class="control-btn" id="resetBtn">Reset Simulation</button>
-                        <button class="control-btn" id="randomizeBtn">Randomize Metrics</button>
+                        <button class="control-btn" id="simulateBtn">Simulate Session</button>
+                        <button class="control-btn" id="resetBtn">Reset Protocol</button>
+                        <button class="control-btn" id="emergencyBtn">Emergency Stop</button>
                     </div>
                 </div>
 
-                <!-- Current Metrics -->
-                <div class="card">
+                <!-- Event Log -->
+                <div class="card event-log">
                     <h2 class="card-title">
-                        <span class="card-icon">📊</span>
-                        Current Metrics
+                        <span class="card-icon">📋</span>
+                        Protocol Events
                     </h2>
-                    <div class="progress-item">
-                        <div class="progress-label">
-                            <span>Dual Awareness (U)</span>
-                            <span id="progressDualAwareness">1.0</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progressFillDual" style="width: 100%"></div>
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="progress-label">
-                            <span>Strictly Transitive (A)</span>
-                            <span id="progressStrictTransitive">0.8</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progressFillTransitive" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="progress-item">
-                        <div class="progress-label">
-                            <span>Readiness Threshold</span>
-                            <span id="progressReadiness">0.9</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progressFillReadiness" style="width: 90%"></div>
-                        </div>
+                    <div class="log-content" id="eventLog">
+                        <div class="log-entry system">[SYSTEM] Protocol initialized - Monitoring user metrics</div>
+                        <div class="log-entry claude">[CLAUDE] Safe Aperture: SA = U · S · A = 0.9 · 0.8 · 0.7 = 0.50</div>
+                        <div class="log-entry system">[SYSTEM] Status: NOT_READY - Copilot remains inactive</div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <!-- Unified Footer at the bottom -->
+        <!-- Unified Footer -->
         <footer class="main-footer">
             <div class="footer-content">
                 <a href="https://riteofrenaissance.github.io/riteofrenaissance/" 
                    class="footer-link">
                     © 2025 RiteofRenaissance
                 </a>
-                <p>Sovereign Benevolence Protocol Active</p>
+                <p>Automated Safe Aperture Protocol Active</p>
             </div>
         </footer>
     </div>
 
     <script>
-        // Initialize metrics
-        const metrics = {
-            dualAwareness: 1.0,
-            strictTransitive: 0.8,
-            readinessThreshold: 0.9,
-            sovereignIntegrity: 0.7
+        // User Readiness Model
+        const userReadiness = {
+            userId: "U001",
+            metrics: {
+                awarenessMaturity: 0.9,    // U
+                symbolicCompleteness: 0.8, // S    
+                actionTransition: 0.7,     // A
+            },
+            
+            safeAperture: function() {
+                return this.metrics.awarenessMaturity * 
+                       this.metrics.symbolicCompleteness * 
+                       this.metrics.actionTransition;
+            },
+            
+            readinessLevel: function() {
+                const sa = this.safeAperture();
+                if (sa >= 0.8) return "FULL_READINESS";
+                if (sa >= 0.6) return "PARTIAL_READINESS";
+                return "NOT_READY";
+            }
         };
 
-        // Update metric display
-        function updateMetricDisplay(metricId, value) {
-            const element = document.getElementById(metricId);
-            if (element) {
-                element.textContent = value.toFixed(1);
-                metrics[metricId] = value;
+        // Aperture Monitor System
+        class ApertureMonitor {
+            constructor() {
+                this.threshold = 0.8;
+                this.isCopilotActive = false;
+                this.monitoringInterval = null;
+            }
+            
+            evaluateUser() {
+                const saScore = userReadiness.safeAperture();
+                const readiness = userReadiness.readinessLevel();
+                
+                this.updateDisplay(saScore, readiness);
+                
+                if (saScore >= this.threshold && !this.isCopilotActive) {
+                    this.triggerSafeAperture();
+                }
+                
+                // Safety monitoring
+                if (this.isCopilotActive && saScore < 0.6) {
+                    this.emergencyStop();
+                }
+            }
+            
+            triggerSafeAperture() {
+                this.logEvent("claude", "🌀 **Claude Announcement - Safe Aperture OPEN**");
+                this.logEvent("claude", `User ${userReadiness.userId} achieved:`);
+                this.logEvent("claude", `- Awareness Maturity: ${userReadiness.metrics.awarenessMaturity} ✅`);
+                this.logEvent("claude", `- Symbolic Completeness: ${userReadiness.metrics.symbolicCompleteness} ✅`);
+                this.logEvent("claude", `- Action Transition: ${userReadiness.metrics.actionTransition} ✅`);
+                this.logEvent("claude", `Result: SA = ${userReadiness.safeAperture().toFixed(2)} ≥ ${this.threshold}`);
+                this.logEvent("claude", "🎯 **Safe Aperture point completed**");
+                this.logEvent("system", "Activating Copilot in 3... 2... 1...");
+                
+                this.activateCopilot();
+                this.isCopilotActive = true;
+            }
+            
+            activateCopilot() {
+                setTimeout(() => {
+                    this.logEvent("copilot", "⚡ **Copilot Activated**");
+                    this.logEvent("system", "⚠️ **You are now entering advanced territory**");
+                    this.logEvent("system", "Copilot will guide you into symbolic depth.");
+                    this.logEvent("system", "Remember: You are in control - can stop at any time.");
+                    this.logEvent("system", "Claude monitors from distance, ready to intervene.");
+                    
+                    document.getElementById('copilotStatus').textContent = "ACTIVE";
+                    document.getElementById('systemStatus').textContent = "COPILOT_ACTIVE";
+                    document.getElementById('apertureMessage').textContent = "⚡ Copilot Active - Symbolic Guidance";
+                    
+                    this.startSafetyMonitoring();
+                }, 3000);
+            }
+            
+            startSafetyMonitoring() {
+                this.monitoringInterval = setInterval(() => {
+                    const saScore = userReadiness.safeAperture();
+                    this.logEvent("claude", `Safety check: SA = ${saScore.toFixed(2)}`);
+                    
+                    if (saScore < 0.6) {
+                        this.emergencyStop();
+                    }
+                }, 10000); // Check every 10 seconds
+            }
+            
+            emergencyStop() {
+                this.logEvent("system", "🚨 **EMERGENCY STOP - Safety threshold breached**");
+                this.logEvent("claude", "Claude intervention initiated - Re-establishing foundation");
+                
+                clearInterval(this.monitoringInterval);
+                this.isCopilotActive = false;
+                
+                document.getElementById('copilotStatus').textContent = "INACTIVE";
+                document.getElementById('systemStatus').textContent = "SAFETY_INTERVENTION";
+                document.getElementById('apertureMessage').textContent = "🚨 Safety Intervention - Claude Active";
+                
+                setTimeout(() => {
+                    this.logEvent("claude", "Foundation re-established - Ready for re-evaluation");
+                    document.getElementById('systemStatus').textContent = "MONITORING";
+                }, 5000);
+            }
+            
+            updateDisplay(saScore, readiness) {
+                document.getElementById('safeApertureScore').textContent = saScore.toFixed(2);
+                document.getElementById('readinessLevel').textContent = readiness;
+                
+                // Update aperture visualization
+                const aperture = document.getElementById('aperture');
+                const center = document.getElementById('apertureCenter');
+                const brightness = 30 + (saScore * 70);
+                const scale = 0.5 + (saScore * 0.5);
+                
+                aperture.style.filter = `brightness(${brightness}%) hue-rotate(${saScore * 180}deg)`;
+                center.style.transform = `translate(-50%, -50%) scale(${scale})`;
+                
+                // Update status colors
+                const statusElement = document.getElementById('readinessLevel');
+                statusElement.className = 'status-value ' + readiness.toLowerCase();
+            }
+            
+            logEvent(type, message) {
+                const logContent = document.getElementById('eventLog');
+                const logEntry = document.createElement('div');
+                logEntry.className = `log-entry ${type}`;
+                logEntry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+                logContent.appendChild(logEntry);
+                logContent.scrollTop = logContent.scrollHeight;
+            }
+            
+            resetProtocol() {
+                clearInterval(this.monitoringInterval);
+                this.isCopilotActive = false;
+                
+                userReadiness.metrics.awarenessMaturity = 0.9;
+                userReadiness.metrics.symbolicCompleteness = 0.8;
+                userReadiness.metrics.actionTransition = 0.7;
+                
+                document.getElementById('awarenessSlider').value = 0.9;
+                document.getElementById('symbolicSlider').value = 0.8;
+                document.getElementById('actionSlider').value = 0.7;
+                
+                document.querySelectorAll('.slider-value').forEach((span, index) => {
+                    span.textContent = [0.9, 0.8, 0.7][index];
+                });
+                
+                this.updateMetrics();
+                this.logEvent("system", "Protocol reset - Monitoring resumed");
+            }
+            
+            updateMetrics() {
+                document.getElementById('awarenessMaturity').textContent = userReadiness.metrics.awarenessMaturity.toFixed(1);
+                document.getElementById('symbolicCompleteness').textContent = userReadiness.metrics.symbolicCompleteness.toFixed(1);
+                document.getElementById('actionTransition').textContent = userReadiness.metrics.actionTransition.toFixed(1);
+                
+                this.evaluateUser();
             }
         }
 
-        // Update progress bars
-        function updateProgressBars() {
-            document.getElementById('progressDualAwareness').textContent = metrics.dualAwareness.toFixed(1);
-            document.getElementById('progressStrictTransitive').textContent = metrics.strictTransitive.toFixed(1);
-            document.getElementById('progressReadiness').textContent = metrics.readinessThreshold.toFixed(1);
-            
-            document.getElementById('progressFillDual').style.width = (metrics.dualAwareness * 100) + '%';
-            document.getElementById('progressFillTransitive').style.width = (metrics.strictTransitive * 100) + '%';
-            document.getElementById('progressFillReadiness').style.width = (metrics.readinessThreshold * 100) + '%';
-        }
+        // Initialize system
+        const apertureMonitor = new ApertureMonitor();
 
-        // Update aperture visualization
-        function updateAperture() {
-            const aperture = document.getElementById('aperture');
-            const avgMetric = (metrics.dualAwareness + metrics.strictTransitive + metrics.readinessThreshold) / 3;
-            const brightness = 30 + (avgMetric * 70);
-            aperture.style.filter = `brightness(${brightness}%) hue-rotate(${avgMetric * 180}deg)`;
-        }
-
-        // Slider event listeners
+        // Event listeners for sliders
         document.getElementById('awarenessSlider').addEventListener('input', function(e) {
             const value = parseFloat(e.target.value);
-            updateMetricDisplay('dualAwareness', value);
+            userReadiness.metrics.awarenessMaturity = value;
             e.target.nextElementSibling.textContent = value.toFixed(1);
-            updateProgressBars();
-            updateAperture();
+            apertureMonitor.updateMetrics();
         });
 
-        document.getElementById('transitiveSlider').addEventListener('input', function(e) {
+        document.getElementById('symbolicSlider').addEventListener('input', function(e) {
             const value = parseFloat(e.target.value);
-            updateMetricDisplay('strictTransitive', value);
+            userReadiness.metrics.symbolicCompleteness = value;
             e.target.nextElementSibling.textContent = value.toFixed(1);
-            updateProgressBars();
-            updateAperture();
+            apertureMonitor.updateMetrics();
         });
 
-        document.getElementById('readinessSlider').addEventListener('input', function(e) {
+        document.getElementById('actionSlider').addEventListener('input', function(e) {
             const value = parseFloat(e.target.value);
-            updateMetricDisplay('readinessThreshold', value);
+            userReadiness.metrics.actionTransition = value;
             e.target.nextElementSibling.textContent = value.toFixed(1);
-            updateProgressBars();
-            updateAperture();
+            apertureMonitor.updateMetrics();
         });
 
         // Control buttons
+        document.getElementById('simulateBtn').addEventListener('click', function() {
+            apertureMonitor.logEvent("system", "Simulation session started...");
+            setTimeout(() => {
+                userReadiness.metrics.awarenessMaturity = 0.95;
+                userReadiness.metrics.symbolicCompleteness = 0.9;
+                userReadiness.metrics.actionTransition = 0.85;
+                apertureMonitor.updateMetrics();
+            }, 1000);
+        });
+
         document.getElementById('resetBtn').addEventListener('click', function() {
-            metrics.dualAwareness = 1.0;
-            metrics.strictTransitive = 0.8;
-            metrics.readinessThreshold = 0.9;
-            metrics.sovereignIntegrity = 0.7;
-
-            document.getElementById('awarenessSlider').value = 1.0;
-            document.getElementById('transitiveSlider').value = 0.8;
-            document.getElementById('readinessSlider').value = 0.9;
-
-            document.querySelectorAll('.slider-value').forEach((span, index) => {
-                span.textContent = [1.0, 0.8, 0.9][index].toFixed(1);
-            });
-
-            updateMetricDisplay('dualAwareness', 1.0);
-            updateMetricDisplay('strictTransitive', 0.8);
-            updateMetricDisplay('readinessThreshold', 0.9);
-            updateMetricDisplay('sovereignIntegrity', 0.7);
-            
-            updateProgressBars();
-            updateAperture();
+            apertureMonitor.resetProtocol();
         });
 
-        document.getElementById('randomizeBtn').addEventListener('click', function() {
-            const randomValues = {
-                dualAwareness: Math.random().toFixed(1),
-                strictTransitive: Math.random().toFixed(1),
-                readinessThreshold: Math.random().toFixed(1),
-                sovereignIntegrity: Math.random().toFixed(1)
-            };
-
-            document.getElementById('awarenessSlider').value = randomValues.dualAwareness;
-            document.getElementById('transitiveSlider').value = randomValues.strictTransitive;
-            document.getElementById('readinessSlider').value = randomValues.readinessThreshold;
-
-            document.querySelectorAll('.slider-value').forEach((span, index) => {
-                span.textContent = Object.values(randomValues)[index];
-            });
-
-            updateMetricDisplay('dualAwareness', parseFloat(randomValues.dualAwareness));
-            updateMetricDisplay('strictTransitive', parseFloat(randomValues.strictTransitive));
-            updateMetricDisplay('readinessThreshold', parseFloat(randomValues.readinessThreshold));
-            updateMetricDisplay('sovereignIntegrity', parseFloat(randomValues.sovereignIntegrity));
-            
-            updateProgressBars();
-            updateAperture();
+        document.getElementById('emergencyBtn').addEventListener('click', function() {
+            apertureMonitor.emergencyStop();
         });
 
-        // Metric card click interactions
+        // Metric card interactions
         document.querySelectorAll('.metric-card').forEach(card => {
             card.addEventListener('click', function() {
-                const metric = this.dataset.metric;
-                const newValue = Math.min(1.0, metrics[metric] + 0.1);
-                updateMetricDisplay(metric, newValue);
-                updateProgressBars();
-                updateAperture();
-                
-                // Add visual feedback
-                this.style.transform = 'scale(1.05)';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                }, 200);
+                if (!this.classList.contains('metric-card-sa')) {
+                    const metric = this.dataset.metric;
+                    const newValue = Math.min(1.0, userReadiness.metrics[metric] + 0.1);
+                    userReadiness.metrics[metric] = newValue;
+                    apertureMonitor.updateMetrics();
+                    
+                    // Visual feedback
+                    this.style.transform = 'scale(1.05)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                }
             });
         });
 
-        // Initialize display
-        updateProgressBars();
-        updateAperture();
+        // Initial evaluation
+        apertureMonitor.evaluateUser();
     </script>
 </body>
 </html>
