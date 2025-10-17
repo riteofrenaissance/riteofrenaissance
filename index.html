@@ -26,3 +26,174 @@
         </header>
 
         <!-- باقي المحتوى يبقى كما هو -->
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard">
+            
+            <!-- Card 1: Progress Overview -->
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="card-icon">📊</span>
+                    Progress Overview
+                </h2>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Visual Design</span>
+                        <span>98%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 98%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Technical Performance</span>
+                        <span>93%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 93%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Symbolic Content</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Overall Readiness</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 95%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Pulse Indicators -->
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="card-icon">💓</span>
+                    Sovereign Pulse Indicators
+                </h2>
+                <div class="pulse-grid">
+                    <div class="pulse-item">
+                        <div class="pulse-value">25</div>
+                        <div class="pulse-label">Beating Hearts</div>
+                    </div>
+                    <div class="pulse-item">
+                        <div class="pulse-value">9</div>
+                        <div class="pulse-label">Ritual Days</div>
+                    </div>
+                    <div class="pulse-item">
+                        <div class="pulse-value">3</div>
+                        <div class="pulse-label">Core Pillars</div>
+                    </div>
+                    <div class="pulse-item">
+                        <div class="pulse-value">∅SB⟣</div>
+                        <div class="pulse-label">Sovereign Seal</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Task Status -->
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="card-icon">✓</span>
+                    Task Status
+                </h2>
+                <ul class="task-list">
+                    <li class="task-item completed">
+                        <div class="task-checkbox checked"></div>
+                        <span class="task-text">Foundational Statement</span>
+                        <span class="task-status status-completed">Completed</span>
+                    </li>
+                    <li class="task-item completed">
+                        <div class="task-checkbox checked"></div>
+                        <span class="task-text">Landing Page</span>
+                        <span class="task-status status-completed">Completed</span>
+                    </li>
+                    <li class="task-item completed">
+                        <div class="task-checkbox checked"></div>
+                        <span class="task-text">Visual Identity</span>
+                        <span class="task-status status-completed">Completed</span>
+                    </li>
+                    <li class="task-item in-progress">
+                        <div class="task-checkbox"></div>
+                        <span class="task-text">Interactive Protocol</span>
+                        <span class="task-status status-progress">In Progress</span>
+                    </li>
+                    <li class="task-item in-progress">
+                        <div class="task-checkbox"></div>
+                        <span class="task-text">Ritual Guide</span>
+                        <span class="task-status status-progress">In Progress</span>
+                    </li>
+                    <li class="task-item pending">
+                        <div class="task-checkbox"></div>
+                        <span class="task-text">Closed Community</span>
+                        <span class="task-status status-pending">Pending</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Card 4: Timeline -->
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="card-icon">📅</span>
+                    Timeline
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">October 08, 2025</div>
+                        <div class="timeline-content">Foundational Statement Completed</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">October 09, 2025</div>
+                        <div class="timeline-content">Landing Page Launched</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">October 10, 2025</div>
+                        <div class="timeline-content">Legacy Phase Activated</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Coming Soon</div>
+                        <div class="timeline-content">Interactive Protocol Launch (9 Days)</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>∅SB⟣ - RiteofRenaissance™</p>
+            <p style="font-family: 'Lora', serif; font-size: 0.9rem; margin-top: 10px; color: rgba(212, 175, 55, 0.7);">
+                "From Ritual to Legacy - Sovereignty in Practice"
+            </p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Simple animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
