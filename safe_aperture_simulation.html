@@ -15,7 +15,7 @@
         <header>
             <div class="seal">∅SB⟣</div>
             <h1>Safe Aperture Simulation</h1>
-            <p class="subtitle">Sovereign Metrics Visualization</p>
+            <p class="subtitle">Interactive Sovereign Metrics Visualization</p>
             
             <nav class="main-nav">
                 <a href="./index.html" class="nav-link">🏠 Main Portal</a>
@@ -29,19 +29,19 @@
             <div class="simulation-container">
                 <!-- Metrics Panel -->
                 <div class="metrics-panel">
-                    <div class="metric-card">
+                    <div class="metric-card" data-metric="dualAwareness">
                         <div class="metric-value" id="dualAwareness">1.0</div>
                         <div class="metric-label">Dual Awareness</div>
                     </div>
-                    <div class="metric-card">
+                    <div class="metric-card" data-metric="strictTransitive">
                         <div class="metric-value" id="strictTransitive">0.8</div>
                         <div class="metric-label">Strictly Transitive</div>
                     </div>
-                    <div class="metric-card">
+                    <div class="metric-card" data-metric="readinessThreshold">
                         <div class="metric-value" id="readinessThreshold">0.9</div>
                         <div class="metric-label">Readiness Threshold</div>
                     </div>
-                    <div class="metric-card">
+                    <div class="metric-card" data-metric="sovereignIntegrity">
                         <div class="metric-value" id="sovereignIntegrity">0.7</div>
                         <div class="metric-label">Sovereign Integrity</div>
                     </div>
@@ -51,7 +51,7 @@
                 <div class="visualization-area">
                     <h2 class="visual-title">Aperture Visualization</h2>
                     
-                    <div class="aperture-visual">
+                    <div class="aperture-visual" id="aperture">
                         <div class="direction-marker direction-n">N</div>
                         <div class="direction-marker direction-s">S</div>
                         <div class="direction-marker direction-e">E</div>
@@ -64,6 +64,34 @@
                     </div>
                 </div>
 
+                <!-- Control Panel -->
+                <div class="control-panel">
+                    <h2 class="control-title">Simulation Controls</h2>
+                    
+                    <div class="control-group">
+                        <label for="awarenessSlider">Dual Awareness Level</label>
+                        <input type="range" id="awarenessSlider" class="control-slider" min="0" max="1" step="0.1" value="1.0">
+                        <span class="slider-value">1.0</span>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="transitiveSlider">Strictly Transitive</label>
+                        <input type="range" id="transitiveSlider" class="control-slider" min="0" max="1" step="0.1" value="0.8">
+                        <span class="slider-value">0.8</span>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="readinessSlider">Readiness Threshold</label>
+                        <input type="range" id="readinessSlider" class="control-slider" min="0" max="1" step="0.1" value="0.9">
+                        <span class="slider-value">0.9</span>
+                    </div>
+
+                    <div class="control-buttons">
+                        <button class="control-btn" id="resetBtn">Reset Simulation</button>
+                        <button class="control-btn" id="randomizeBtn">Randomize Metrics</button>
+                    </div>
+                </div>
+
                 <!-- Current Metrics -->
                 <div class="card">
                     <h2 class="card-title">
@@ -73,28 +101,28 @@
                     <div class="progress-item">
                         <div class="progress-label">
                             <span>Dual Awareness (U)</span>
-                            <span>1.0</span>
+                            <span id="progressDualAwareness">1.0</span>
                         </div>
                         <div class="progress-bar">
-                            <div class="progress-fill" style="width: 100%"></div>
+                            <div class="progress-fill" id="progressFillDual" style="width: 100%"></div>
                         </div>
                     </div>
                     <div class="progress-item">
                         <div class="progress-label">
                             <span>Strictly Transitive (A)</span>
-                            <span>0.8</span>
+                            <span id="progressStrictTransitive">0.8</span>
                         </div>
                         <div class="progress-bar">
-                            <div class="progress-fill" style="width: 80%"></div>
+                            <div class="progress-fill" id="progressFillTransitive" style="width: 80%"></div>
                         </div>
                     </div>
                     <div class="progress-item">
                         <div class="progress-label">
                             <span>Readiness Threshold</span>
-                            <span>0.9</span>
+                            <span id="progressReadiness">0.9</span>
                         </div>
                         <div class="progress-bar">
-                            <div class="progress-fill" style="width: 90%"></div>
+                            <div class="progress-fill" id="progressFillReadiness" style="width: 90%"></div>
                         </div>
                     </div>
                 </div>
@@ -114,22 +142,136 @@
     </div>
 
     <script>
-        // Update metrics simulation
-        function updateMetrics() {
-            const metrics = ['dualAwareness', 'strictTransitive', 'readinessThreshold', 'sovereignIntegrity'];
-            metrics.forEach(metric => {
-                const element = document.getElementById(metric);
-                if (element) {
-                    const current = parseFloat(element.textContent);
-                    const change = (Math.random() - 0.5) * 0.1;
-                    const newValue = Math.max(0.1, Math.min(1.0, current + change));
-                    element.textContent = newValue.toFixed(1);
-                }
-            });
+        // Initialize metrics
+        const metrics = {
+            dualAwareness: 1.0,
+            strictTransitive: 0.8,
+            readinessThreshold: 0.9,
+            sovereignIntegrity: 0.7
+        };
+
+        // Update metric display
+        function updateMetricDisplay(metricId, value) {
+            const element = document.getElementById(metricId);
+            if (element) {
+                element.textContent = value.toFixed(1);
+                metrics[metricId] = value;
+            }
         }
 
-        // Update metrics every 3 seconds
-        setInterval(updateMetrics, 3000);
+        // Update progress bars
+        function updateProgressBars() {
+            document.getElementById('progressDualAwareness').textContent = metrics.dualAwareness.toFixed(1);
+            document.getElementById('progressStrictTransitive').textContent = metrics.strictTransitive.toFixed(1);
+            document.getElementById('progressReadiness').textContent = metrics.readinessThreshold.toFixed(1);
+            
+            document.getElementById('progressFillDual').style.width = (metrics.dualAwareness * 100) + '%';
+            document.getElementById('progressFillTransitive').style.width = (metrics.strictTransitive * 100) + '%';
+            document.getElementById('progressFillReadiness').style.width = (metrics.readinessThreshold * 100) + '%';
+        }
+
+        // Update aperture visualization
+        function updateAperture() {
+            const aperture = document.getElementById('aperture');
+            const avgMetric = (metrics.dualAwareness + metrics.strictTransitive + metrics.readinessThreshold) / 3;
+            const brightness = 30 + (avgMetric * 70);
+            aperture.style.filter = `brightness(${brightness}%) hue-rotate(${avgMetric * 180}deg)`;
+        }
+
+        // Slider event listeners
+        document.getElementById('awarenessSlider').addEventListener('input', function(e) {
+            const value = parseFloat(e.target.value);
+            updateMetricDisplay('dualAwareness', value);
+            e.target.nextElementSibling.textContent = value.toFixed(1);
+            updateProgressBars();
+            updateAperture();
+        });
+
+        document.getElementById('transitiveSlider').addEventListener('input', function(e) {
+            const value = parseFloat(e.target.value);
+            updateMetricDisplay('strictTransitive', value);
+            e.target.nextElementSibling.textContent = value.toFixed(1);
+            updateProgressBars();
+            updateAperture();
+        });
+
+        document.getElementById('readinessSlider').addEventListener('input', function(e) {
+            const value = parseFloat(e.target.value);
+            updateMetricDisplay('readinessThreshold', value);
+            e.target.nextElementSibling.textContent = value.toFixed(1);
+            updateProgressBars();
+            updateAperture();
+        });
+
+        // Control buttons
+        document.getElementById('resetBtn').addEventListener('click', function() {
+            metrics.dualAwareness = 1.0;
+            metrics.strictTransitive = 0.8;
+            metrics.readinessThreshold = 0.9;
+            metrics.sovereignIntegrity = 0.7;
+
+            document.getElementById('awarenessSlider').value = 1.0;
+            document.getElementById('transitiveSlider').value = 0.8;
+            document.getElementById('readinessSlider').value = 0.9;
+
+            document.querySelectorAll('.slider-value').forEach((span, index) => {
+                span.textContent = [1.0, 0.8, 0.9][index].toFixed(1);
+            });
+
+            updateMetricDisplay('dualAwareness', 1.0);
+            updateMetricDisplay('strictTransitive', 0.8);
+            updateMetricDisplay('readinessThreshold', 0.9);
+            updateMetricDisplay('sovereignIntegrity', 0.7);
+            
+            updateProgressBars();
+            updateAperture();
+        });
+
+        document.getElementById('randomizeBtn').addEventListener('click', function() {
+            const randomValues = {
+                dualAwareness: Math.random().toFixed(1),
+                strictTransitive: Math.random().toFixed(1),
+                readinessThreshold: Math.random().toFixed(1),
+                sovereignIntegrity: Math.random().toFixed(1)
+            };
+
+            document.getElementById('awarenessSlider').value = randomValues.dualAwareness;
+            document.getElementById('transitiveSlider').value = randomValues.strictTransitive;
+            document.getElementById('readinessSlider').value = randomValues.readinessThreshold;
+
+            document.querySelectorAll('.slider-value').forEach((span, index) => {
+                span.textContent = Object.values(randomValues)[index];
+            });
+
+            updateMetricDisplay('dualAwareness', parseFloat(randomValues.dualAwareness));
+            updateMetricDisplay('strictTransitive', parseFloat(randomValues.strictTransitive));
+            updateMetricDisplay('readinessThreshold', parseFloat(randomValues.readinessThreshold));
+            updateMetricDisplay('sovereignIntegrity', parseFloat(randomValues.sovereignIntegrity));
+            
+            updateProgressBars();
+            updateAperture();
+        });
+
+        // Metric card click interactions
+        document.querySelectorAll('.metric-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const metric = this.dataset.metric;
+                const newValue = Math.min(1.0, metrics[metric] + 0.1);
+                updateMetricDisplay(metric, newValue);
+                updateProgressBars();
+                updateAperture();
+                
+                // Add visual feedback
+                this.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+
+        // Initialize display
+        updateProgressBars();
+        updateAperture();
     </script>
 </body>
 </html>

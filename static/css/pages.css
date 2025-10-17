@@ -131,11 +131,18 @@ body {
     border: 1px solid rgba(212, 175, 55, 0.2);
     text-align: center;
     transition: all 0.3s ease;
+    cursor: pointer;
+    user-select: none;
 }
 
 .metric-card:hover {
     transform: translateY(-5px);
     background: rgba(212, 175, 55, 0.08);
+    border-color: var(--gold);
+}
+
+.metric-card:active {
+    transform: scale(0.95);
 }
 
 .metric-value {
@@ -143,6 +150,7 @@ body {
     font-size: 2rem;
     color: var(--gold);
     margin-bottom: 5px;
+    transition: all 0.3s ease;
 }
 
 .metric-label {
@@ -151,6 +159,103 @@ body {
     opacity: 0.8;
 }
 
+/* Control Panel Styles */
+.control-panel {
+    background: rgba(44, 62, 80, 0.7);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px 0;
+    backdrop-filter: blur(10px);
+}
+
+.control-title {
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+}
+
+.control-slider {
+    width: 100%;
+    margin: 10px 0;
+    background: rgba(245, 245, 220, 0.1);
+    border-radius: 10px;
+    height: 8px;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.control-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--gold);
+    cursor: pointer;
+    border: 2px solid var(--light);
+}
+
+.control-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--gold);
+    cursor: pointer;
+    border: 2px solid var(--light);
+}
+
+.slider-value {
+    display: inline-block;
+    margin-left: 10px;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    min-width: 30px;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px 20px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    background: rgba(212, 175, 55, 0.2);
+    transform: translateY(-2px);
+}
+
+.control-btn:active {
+    transform: scale(0.98);
+}
+
+/* Aperture Visualization */
 .aperture-visual {
     width: 300px;
     height: 300px;
@@ -170,6 +275,7 @@ body {
     border-radius: 50%;
     border: 3px solid var(--gold);
     position: relative;
+    transition: all 0.5s ease;
 }
 
 .direction-marker {
@@ -195,6 +301,7 @@ body {
     background: var(--light);
     border-radius: 50%;
     border: 2px solid var(--gold);
+    transition: all 0.5s ease;
 }
 
 .simulation-status {
