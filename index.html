@@ -16,7 +16,6 @@
             <h1>RiteofRenaissance™</h1>
             <p class="subtitle">Central Portal - Revival and Embodiment Phase</p>
             
-            <!-- Navigation Links -->
             <nav class="main-nav">
                 <a href="./landing.html" class="nav-link">🚀 Initial Ritual</a>
                 <a href="./safe_aperture_simulation.html" class="nav-link">📊 Visual System</a>
@@ -24,8 +23,6 @@
                 <a href="https://github.com/riteofrenaissance/riteofrenaissance" class="nav-link">📁 GitHub</a>
             </nav>
         </header>
-
-        <!-- باقي المحتوى يبقى كما هو -->
 
         <!-- Dashboard Grid -->
         <div class="dashboard">
@@ -172,28 +169,27 @@
 
         </div>
 
-        <!-- Footer -->
-        <footer>
-            <p>∅SB⟣ - RiteofRenaissance™</p>
-            <p style="font-family: 'Lora', serif; font-size: 0.9rem; margin-top: 10px; color: rgba(212, 175, 55, 0.7);">
-                "From Ritual to Legacy - Sovereignty in Practice"
-            </p>
+        <!-- Footer المبسط -->
+        <footer style="text-align: center; margin-top: 50px; padding: 30px; border-top: 1px solid #D4AF37;">
+            <a href="https://riteofrenaissance.github.io/riteofrenaissance/" 
+               style="color: #D4AF37; text-decoration: none; font-family: 'Cinzel', serif; font-size: 1.1rem;">
+                © 2025 RiteofRenaissance
+            </a>
         </footer>
 
     </div>
 
     <script>
-        // Simple animations
         document.addEventListener('DOMContentLoaded', function() {
             const progressBars = document.querySelectorAll('.progress-fill');
             progressBars.forEach(bar => {
-        <!-- Footer -->
-        <footer>
-            <p style="text-align: center; margin-top: 50px; padding: 20px; border-top: 1px solid var(--gold);">
-                <a href="https://riteofrenaissance.github.io/riteofrenaissance/" 
-                  style="color: var(--gold); text-decoration: none; font-family: 'Cinzel', serif; font-size: 1.1rem;">
-                    © 2025 RiteofRenaissance
-                </a>
-            </p>
-        </footer>
-</div></body></html>
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
