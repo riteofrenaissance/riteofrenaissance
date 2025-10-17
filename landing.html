@@ -121,6 +121,7 @@
             
             <nav class="main-nav">
                 <a href="./index.html" class="nav-link">🏠 Main Portal</a>
+                <a href="./contact.html" class="nav-link">📧 Contact</a>
                 <a href="./safe_aperture_simulation.html" class="nav-link">📊 Visual System</a>
                 <a href="./chat.html" class="nav-link">💬 Secure Chat</a>
             </nav>
@@ -165,17 +166,6 @@
                     <textarea name="Question_3_Practice" placeholder="Envision your creation..." required></textarea>
                 </div>
 
-                <!-- Optional Contact Info -->
-                <div class="ritual-question" style="background: rgba(46, 139, 87, 0.08); border-left-color: var(--primary);">
-                    <div class="question-text">Contact Information (Optional)</div>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
-                        <input type="text" name="name" placeholder="Your Name" 
-                               style="padding: 12px; background: rgba(245, 245, 220, 0.1); border: 1px solid var(--primary); border-radius: 5px; color: var(--light);">
-                        <input type="email" name="email" placeholder="Your Email" 
-                               style="padding: 12px; background: rgba(245, 245, 220, 0.1); border: 1px solid var(--primary); border-radius: 5px; color: var(--light);">
-                    </div>
-                </div>
-
                 <div style="margin-top: 40px;">
                     <button type="submit" class="submit-btn">
                         🚀 I Am Ready - Submit to Sovereign Archive
@@ -185,6 +175,7 @@
 
             <div style="margin-top: 30px;">
                 <a href="./index.html" class="home-link">← Return to Main Portal</a>
+                <a href="./contact.html" class="home-link">📧 General Contact</a>
             </div>
         </div>
 
@@ -199,7 +190,6 @@
 
     <script>
         document.getElementById('ritualForm').addEventListener('submit', function(e) {
-            // Basic validation
             const textareas = this.querySelectorAll('textarea[required]');
             let allFilled = true;
             
@@ -218,7 +208,6 @@
                 return;
             }
             
-            // Optional: Add loading state
             const submitBtn = this.querySelector('.submit-btn');
             submitBtn.innerHTML = '⏳ Submitting...';
             submitBtn.disabled = true;
