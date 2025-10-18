@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Screening - RiteofRenaissance</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./static/css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="seal">∅SB⟣</div>
+            <h1>Safe Aperture Study Screening</h1>
+            <p class="subtitle">Pre-Enrollment Eligibility Assessment</p>
+            
+            <nav class="main-nav">
+                <a href="./index.html" class="nav-link">🏠 Main Portal</a>
+                <a href="./landing.html" class="nav-link">🚀 Initial Ritual</a>
+                <a href="./safe_aperture_simulation.html" class="nav-link">🎯 Safe Aperture</a>
+                <a href="./chat.html" class="nav-link">💬 Secure Chat</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="screening-container">
+                <!-- Screening Progress -->
+                <div class="screening-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="screeningProgress" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-text">Section <span id="currentSection">1</span> of 6</div>
+                </div>
+
+                <!-- Screening Form -->
+                <form class="screening-form" id="screeningForm" action="https://formsubmit.co/ca08eadb12c590a77b3be7a35d2571bc" method="POST">
+                    <input type="hidden" name="_subject" value="Safe Aperture Study Screening - New Applicant">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <!-- Section 1: Basic Information -->
+                    <div class="screening-section active" data-section="1">
+                        <div class="section-header">
+                            <h2>Section 1: Basic Information</h2>
+                            <p>This section helps us understand your basic eligibility criteria.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age">1. What is your age? *</label>
+                            <select id="age" name="age" required class="eligibility-critical">
+                                <option value="">Select your age range</option>
+                                <option value="under18">Under 18</option>
+                                <option value="18-25">18-25</option>
+                                <option value="26-35">26-35</option>
+                                <option value="36-45">36-45</option>
+                                <option value="46-55">46-55</option>
+                                <option value="56-65">56-65</option>
+                                <option value="over65">Over 65</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">2. What is your gender?</label>
+                            <select id="gender" name="gender">
+                                <option value="">Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="nonbinary">Non-binary</option>
+                                <option value="preferNot">Prefer not to say</option>
+                                <option value="selfDescribe">Prefer to self-describe</option>
+                            </select>
+                            <input type="text" id="genderSelfDescribe" name="genderSelfDescribe" 
+                                   placeholder="Please describe" style="display: none; margin-top: 10px;">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">3. Country of residence *</label>
+                            <input type="text" id="country" name="country" required 
+                                   placeholder="Enter your country">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="languageProficiency">4. Are you fluent in English? *</label>
+                            <select id="languageProficiency" name="languageProficiency" required class="eligibility-critical">
+                                <option value="">Select your answer</option>
+                                <option value="yes">Yes, I am fluent in English</option>
+                                <option value="no">No, I am not fluent in English</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Technology Access -->
+                    <div class="screening-section" data-section="2">
+                        <div class="section-header">
+                            <h2>Section 2: Technology Access</h2>
+                            <p>This study requires consistent internet access.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="internetAccess">5. Do you have reliable daily internet access? *</label>
+                            <select id="internetAccess" name="internetAccess" required class="eligibility-critical">
+                                <option value="">Select your answer</option>
+                                <option value="computer">Yes, on computer</option>
+                                <option value="smartphone">Yes, on smartphone only</option>
+                                <option value="tablet">Yes, on tablet only</option>
+                                <option value="no">No reliable access</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="techComfort">6. Are you comfortable using web-based platforms? *</label>
+                            <select id="techComfort" name="techComfort" required>
+                                <option value="">Select your comfort level</option>
+                                <option value="veryComfortable">Very comfortable</option>
+                                <option value="somewhatComfortable">Somewhat comfortable</option>
+                                <option value="notComfortable">Not very comfortable</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Eligibility Screening -->
+                    <div class="screening-section" data-section="3">
+                        <div class="section-header">
+                            <h2>Section 3: Eligibility Screening</h2>
+                            <p>This section addresses important safety considerations.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label>7. Are you currently experiencing any of the following? (Check all that apply) *</label>
+                            <div class="checkbox-group safety-critical">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="safetyConcerns" value="suicidalThoughts">
+                                    Active suicidal thoughts
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="safetyConcerns" value="psychiatricHospitalization">
+                                    Recent psychiatric hospitalization (within 6 months)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="safetyConcerns" value="psychoticDisorder">
+                                    Diagnosed psychotic disorder (e.g., schizophrenia)
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="safetyConcerns" value="none" class="none-option">
+                                    None of the above
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="depressionFrequency">8. Over the past 2 weeks, how often have you felt down, depressed, or hopeless? *</label>
+                            <select id="depressionFrequency" name="depressionFrequency" required>
+                                <option value="">Select frequency</option>
+                                <option value="notAtAll">Not at all</option>
+                                <option value="severalDays">Several days</option>
+                                <option value="moreThanHalf">More than half the days</option>
+                                <option value="nearlyEveryDay">Nearly every day</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Commitment Assessment -->
+                    <div class="screening-section" data-section="4">
+                        <div class="section-header">
+                            <h2>Section 4: Commitment Assessment</h2>
+                            <p>This study requires consistent participation.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="commitmentLevel">9. Can you commit to: 10-20 minutes daily for 4 weeks, plus surveys? *</label>
+                            <select id="commitmentLevel" name="commitmentLevel" required class="eligibility-critical">
+                                <option value="">Select your answer</option>
+                                <option value="yes">Yes, I can commit to all</option>
+                                <option value="maybe">Maybe (uncertain about time)</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motivation">10. What motivates your interest in this study? *</label>
+                            <textarea id="motivation" name="motivation" required 
+                                      placeholder="Please share 2-3 sentences about what interests you in this study..."
+                                      rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Section 5: Background Information -->
+                    <div class="screening-section" data-section="5">
+                        <div class="section-header">
+                            <h2>Section 5: Background Information (Optional)</h2>
+                            <p>This information helps us understand our participant demographics.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="education">11. Current education level</label>
+                            <select id="education" name="education">
+                                <option value="">Select education level</option>
+                                <option value="highSchool">High school/equivalent</option>
+                                <option value="someCollege">Some college</option>
+                                <option value="bachelors">Bachelor's degree</option>
+                                <option value="masters">Master's degree</option>
+                                <option value="doctoral">Doctoral degree</option>
+                                <option value="preferNot">Prefer not to say</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="meditationExperience">12. Have you practiced meditation or mindfulness before?</label>
+                            <select id="meditationExperience" name="meditationExperience">
+                                <option value="">Select your experience level</option>
+                                <option value="none">No experience</option>
+                                <option value="tried">Tried a few times</option>
+                                <option value="occasional">Practice occasionally (few times/month)</option>
+                                <option value="regular">Regular practice (weekly)</option>
+                                <option value="daily">Daily practice</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="therapyStatus">13. Are you currently in therapy or counseling?</label>
+                            <select id="therapyStatus" name="therapyStatus">
+                                <option value="">Select your answer</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                                <option value="preferNot">Prefer not to say</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Section 6: Contact Information -->
+                    <div class="screening-section" data-section="6">
+                        <div class="section-header">
+                            <h2>Section 6: Contact Information</h2>
+                            <p>If eligible, we'll contact you with next steps.</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">14. Email address *</label>
+                            <input type="email" id="email" name="email" required 
+                                   placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferredName">15. Preferred name *</label>
+                            <input type="text" id="preferredName" name="preferredName" required 
+                                   placeholder="How should we address you?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMethod">16. Best way to reach you *</label>
+                            <select id="contactMethod" name="contactMethod" required>
+                                <option value="">Select preferred method</option>
+                                <option value="email">Email only</option>
+                                <option value="phone">Phone</option>
+                                <option value="both">Both email and phone</option>
+                            </select>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" 
+                                   placeholder="Phone number" style="display: none; margin-top: 10px;">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="questions">17. Any questions or concerns about the study?</label>
+                            <textarea id="questions" name="questions" 
+                                      placeholder="Please share any questions or concerns..."
+                                      rows="3"></textarea>
+                        </div>
+
+                        <div class="consent-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="contactConsent" name="contactConsent" required>
+                                I consent to being contacted about this study
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="noGuarantee" name="noGuarantee" required>
+                                I understand that completing this form does not guarantee acceptance
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="screening-navigation">
+                        <button type="button" id="prevBtn" class="nav-btn secondary" disabled>
+                            ← Previous
+                        </button>
+                        <button type="button" id="nextBtn" class="nav-btn">
+                            Next →
+                        </button>
+                        <button type="submit" id="submitBtn" class="nav-btn primary" style="display: none;">
+                            Submit Application
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Results Container -->
+                <div id="screeningResults" class="screening-results" style="display: none;">
+                    <!-- Results will be displayed here -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Unified Footer -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <a href="https://riteofrenaissance.github.io/riteofrenaissance/" 
+                   class="footer-link">
+                    © 2025 RiteofRenaissance
+                </a>
+                <p>Research Screening Protocol Active</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        class ScreeningSystem {
+            constructor() {
+                this.currentSection = 1;
+                this.totalSections = 6;
+                this.eligibilityStatus = 'pending';
+                this.screeningData = {};
+                
+                this.initializeEventListeners();
+                this.updateProgress();
+            }
+            
+            initializeEventListeners() {
+                // Navigation buttons
+                document.getElementById('prevBtn').addEventListener('click', () => this.previousSection());
+                document.getElementById('nextBtn').addEventListener('click', () => this.nextSection());
+                
+                // Form interactions
+                document.getElementById('gender').addEventListener('change', (e) => {
+                    const selfDescribe = document.getElementById('genderSelfDescribe');
+                    selfDescribe.style.display = e.target.value === 'selfDescribe' ? 'block' : 'none';
+                });
+                
+                document.getElementById('contactMethod').addEventListener('change', (e) => {
+                    const phoneInput = document.getElementById('phoneNumber');
+                    phoneInput.style.display = e.target.value === 'phone' || e.target.value === 'both' ? 'block' : 'none';
+                });
+                
+                // Safety concerns checkboxes
+                document.querySelectorAll('.safety-critical input[type="checkbox"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', (e) => {
+                        if (e.target.classList.contains('none-option') && e.target.checked) {
+                            // Uncheck other options if "none" is selected
+                            document.querySelectorAll('.safety-critical input[type="checkbox"]:not(.none-option)').forEach(cb => {
+                                cb.checked = false;
+                            });
+                        } else if (!e.target.classList.contains('none-option') && e.target.checked) {
+                            // Uncheck "none" if other options are selected
+                            document.querySelector('.safety-critical .none-option').checked = false;
+                        }
+                    });
+                });
+                
+                // Real-time eligibility checking
+                document.querySelectorAll('.eligibility-critical').forEach(element => {
+                    element.addEventListener('change', () => this.checkEligibility());
+                });
+            }
+            
+            checkEligibility() {
+                const age = document.getElementById('age').value;
+                const language = document.getElementById('languageProficiency').value;
+                const internet = document.getElementById('internetAccess').value;
+                const commitment = document.getElementById('commitmentLevel').value;
+                
+                // Critical exclusion criteria
+                if (age === 'under18' || age === 'over65') {
+                    this.showImmediateResult('ageExclusion');
+                    return false;
+                }
+                
+                if (language === 'no') {
+                    this.showImmediateResult('languageExclusion');
+                    return false;
+                }
+                
+                if (internet === 'no') {
+                    this.showImmediateResult('internetExclusion');
+                    return false;
+                }
+                
+                if (commitment === 'no') {
+                    this.showImmediateResult('commitmentExclusion');
+                    return false;
+                }
+                
+                return true;
+            }
+            
+            showImmediateResult(exclusionType) {
+                const messages = {
+                    ageExclusion: {
+                        title: "Age Eligibility",
+                        message: "Thank you for your interest! Participants must be between 18-65 years old.",
+                        type: "ineligible"
+                    },
+                    languageExclusion: {
+                        title: "Language Requirement", 
+                        message: "Thank you for your interest! This study requires fluency in English.",
+                        type: "ineligible"
+                    },
+                    internetExclusion: {
+                        title: "Technology Access",
+                        message: "Thank you for your interest! This study requires reliable daily internet access.",
+                        type: "ineligible"
+                    },
+                    commitmentExclusion: {
+                        title: "Time Commitment",
+                        message: "Thank you for your interest! This study requires consistent daily practice.",
+                        type: "ineligible"
+                    }
+                };
+                
+                this.showResults(messages[exclusionType]);
+            }
+            
+            nextSection() {
+                if (!this.validateCurrentSection()) return;
+                
+                if (this.currentSection < this.totalSections) {
+                    this.hideCurrentSection();
+                    this.currentSection++;
+                    this.showCurrentSection();
+                    this.updateProgress();
+                }
+                
+                if (this.currentSection === this.totalSections) {
+                    document.getElementById('nextBtn').style.display = 'none';
+                    document.getElementById('submitBtn').style.display = 'inline-block';
+                }
+            }
+            
+            previousSection() {
+                if (this.currentSection > 1) {
+                    this.hideCurrentSection();
+                    this.currentSection--;
+                    this.showCurrentSection();
+                    this.updateProgress();
+                }
+                
+                document.getElementById('nextBtn').style.display = 'inline-block';
+                document.getElementById('submitBtn').style.display = 'none';
+            }
+            
+            validateCurrentSection() {
+                const currentSection = document.querySelector(`[data-section="${this.currentSection}"]`);
+                const requiredFields = currentSection.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value) {
+                        isValid = false;
+                        field.style.borderColor = '#ff6b6b';
+                    } else {
+                        field.style.borderColor = '';
+                    }
+                });
+                
+                if (!isValid) {
+                    alert('Please complete all required fields before continuing.');
+                }
+                
+                return isValid;
+            }
+            
+            hideCurrentSection() {
+                document.querySelector(`[data-section="${this.currentSection}"]`).classList.remove('active');
+                document.getElementById('prevBtn').disabled = this.currentSection === 1;
+            }
+            
+            showCurrentSection() {
+                document.querySelector(`[data-section="${this.currentSection}"]`).classList.add('active');
+                document.getElementById('prevBtn').disabled = this.currentSection === 1;
+            }
+            
+            updateProgress() {
+                const progress = (this.currentSection / this.totalSections) * 100;
+                document.getElementById('screeningProgress').style.width = `${progress}%`;
+                document.getElementById('currentSection').textContent = this.currentSection;
+            }
+            
+            showResults(result) {
+                document.getElementById('screeningForm').style.display = 'none';
+                document.getElementById('screeningResults').style.display = 'block';
+                document.getElementById('screeningResults').innerHTML = this.generateResultHTML(result);
+            }
+            
+            generateResultHTML(result) {
+                const templates = {
+                    eligible: `
+                        <div class="result-card eligible">
+                            <div class="result-icon">✅</div>
+                            <h2>Preliminarily Eligible</h2>
+                            <p>Thank you! You appear eligible for the Safe Aperture Study.</p>
+                            
+                            <div class="result-details">
+                                <h3>Next Steps:</h3>
+                                <ol>
+                                    <li>Check your email within 48 hours for the consent form</li>
+                                    <li>After consent, you'll receive baseline surveys</li>
+                                    <li>Study begins on scheduled date</li>
+                                </ol>
+                                
+                                <div class="contact-info">
+                                    <p><strong>Questions?</strong> Email: riteofrenaissance@proton.me</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-actions">
+                                <a href="./index.html" class="action-btn">Return to Portal</a>
+                            </div>
+                        </div>
+                    `,
+                    
+                    ineligible: `
+                        <div class="result-card ineligible">
+                            <div class="result-icon">❌</div>
+                            <h2>Not Eligible at This Time</h2>
+                            <p>Thank you for your interest. Based on your responses, you don't meet eligibility criteria for this study.</p>
+                            
+                            <div class="result-actions">
+                                <a href="./index.html" class="action-btn">Return to Portal</a>
+                                <a href="./contact.html" class="action-btn secondary">Contact Researchers</a>
+                            </div>
+                        </div>
+                    `,
+                    
+                    safetyConcern: `
+                        <div class="result-card safety">
+                            <div class="result-icon">⚠️</div>
+                            <h2>Important Safety Information</h2>
+                            <p>Thank you for your interest. Based on your responses, this study may not be appropriate at this time.</p>
+                            
+                            <div class="safety-resources">
+                                <h3>If you're experiencing distress, please contact:</h3>
+                                <ul>
+                                    <li><strong>National Suicide Prevention Lifeline:</strong> 988</li>
+                                    <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
+                                    <li><strong>Your local emergency services:</strong> 911</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="result-actions">
+                                <a href="./index.html" class="action-btn">Return to Portal</a>
+                            </div>
+                        </div>
+                    `
+                };
+                
+                return templates[result.type] || templates.ineligible;
+            }
+        }
+        
+        // Initialize screening system
+        document.addEventListener('DOMContentLoaded', () => {
+            window.screeningSystem = new ScreeningSystem();
+            
+            // Form submission handler
+            document.getElementById('screeningForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Check for safety concerns
+                const safetyConcerns = Array.from(document.querySelectorAll('input[name="safetyConcerns"]:checked'))
+                    .map(cb => cb.value)
+                    .filter(value => value !== 'none');
+                
+                if (safetyConcerns.length > 0) {
+                    window.screeningSystem.showResults({
+                        title: "Safety Concern",
+                        message: "",
+                        type: "safetyConcern"
+                    });
+                    return;
+                }
+                
+                // If all checks pass, show eligible and submit form
+                window.screeningSystem.showResults({
+                    title: "Eligible",
+                    message: "",
+                    type: "eligible"
+                });
+                
+                // Submit form data to FormSubmit
+                setTimeout(() => {
+                    const formData = new FormData(document.getElementById('screeningForm'));
+                    fetch('https://formsubmit.co/ca08eadb12c590a77b3be7a35d2571bc', {
+                        method: 'POST',
+                        body: formData
+                    });
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
