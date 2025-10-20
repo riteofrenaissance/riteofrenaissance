@@ -1,6 +1,9 @@
 # Rite of Renaissance™
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17172637.svg)](https://doi.org/10.5281/zenodo.17172637)
+# Rite of Renaissance™
+
+[![Platform DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17172637.svg)](https://doi.org/10.5281/zenodo.17172637)
+[![Study DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17396753.svg)](https://doi.org/10.5281/zenodo.17396753)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://riteofrenaissance.github.io/riteofrenaissance/)
 
@@ -89,17 +92,26 @@ riteofrenaissance/
 
 ---
 
-## 🔬 Research
+## 🔬 Scientific Validation
 
-The Safe Aperture intervention is currently undergoing empirical testing in a pre-registered pilot study.
+Safe Aperture is currently undergoing rigorous empirical testing.
 
-**Study Repository:** [riteofrenaissance/safe-aperture-study](https://github.com/riteofrenaissance/safe-aperture-study)
+**📊 Ongoing Study:**
+- **Type:** Pre-registered Randomized Controlled Trial
+- **Sample:** N=30 (intervention vs. waitlist control)
+- **Timeline:** December 2025 - February 2026
+- **Status:** IRB submission in progress
 
-**Study Details:**
-- Randomized controlled trial (N=30)
-- Testing efficacy for increasing ambiguity tolerance
-- Pre-registered protocol with DOI
-- Data collection: Dec 2025 - Jan 2026
+**📁 Study Repository:**
+[riteofrenaissance/safe-aperture-study](https://github.com/riteofrenaissance/safe-aperture-study)
+
+**📖 Study DOI:**
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17396753.svg)](https://doi.org/10.5281/zenodo.17396753)
+
+**Complete Protocol:**
+- [Study Protocol](https://github.com/riteofrenaissance/safe-aperture-study/blob/main/PROTOCOL.md)
+- [Pre-registration](https://github.com/riteofrenaissance/safe-aperture-study/blob/main/PRE-REGISTRATION.md)
+- [Measures](https://github.com/riteofrenaissance/safe-aperture-study/tree/main/measures)
 
 ---
 
@@ -155,14 +167,17 @@ The Safe Aperture intervention is currently undergoing empirical testing in a pr
 ## 📖 Citation
 
 ### Citing the Platform
-```
+
 Rite of Renaissance. (2025). Rite of Renaissance: Safe Aperture and 
-Philosophical Protocols (Version 1.0.0) [Software]. Zenodo. 
+Philosophical Protocols (Version 1.0.0). Zenodo. 
 https://doi.org/10.5281/zenodo.17172637
-```
+
 
 ### Citing the Research Study
-See: [safe-aperture-study repository](https://github.com/riteofrenaissance/safe-aperture-study) for study-specific citation.
+
+Rite of Renaissance. (2025). Safe Aperture Micro-Pilot Study: 
+Pre-registered Protocol (Version 1.0-preregistration). Zenodo. 
+https://doi.org/10.5281/zenodo.17396753
 
 ---
 
