@@ -1,7 +1,5 @@
 # Rite of Renaissance™
 
-# Rite of Renaissance™
-
 [![Platform DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17172637.svg)](https://doi.org/10.5281/zenodo.17172637)
 [![Study DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17396753.svg)](https://doi.org/10.5281/zenodo.17396753)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
