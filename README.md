@@ -269,10 +269,30 @@ Special thanks to all beta testers and early adopters.
 
 ## 🔧 Technologies
 
-- HTML5, CSS3, JavaScript
-- Git & GitHub
-- Netlify
-- Responsive Design
+### **Current Production Stack**
+- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
+- **Deployment:** Netlify, GitHub Pages
+- **Version Control:** Git & GitHub
+- **Design:** Responsive Design, Mobile-First, WCAG 2.1
 
+### **Development & Tools**
+- **Editor:** VS Code
+- **Design:** Figma (for UI/UX design)
+- **Analytics:** Google Analytics (planned)
+- **Testing:** BrowserStack (for cross-browser testing)
+
+### **Future Expansion Ready**
+- **Backend:** Python/Flask, Google Gemini AI
+- **Infrastructure:** Docker, Nginx, Gunicorn
+- **Database:** PostgreSQL, MongoDB
+- **Real-time:** WebSockets (for interactive features)
+
+### **Methodologies**
+- **Progressive Web App** principles
+- **API-First Design**
+- **Microservices Ready** (for scaling)
+- **CI/CD Pipeline** (planned)
+  
 ---
+
 **Developed for Rite of Renaissance**
