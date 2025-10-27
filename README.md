@@ -2,8 +2,8 @@
 
 [![Platform DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17172637.svg)](https://doi.org/10.5281/zenodo.17172637)
 [![Study DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17396753.svg)](https://doi.org/10.5281/zenodo.17396753)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://riteofrenaissance.github.io/riteofrenaissance/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/riteofrenaissance/riteofrenaissance/blob/main/LICENSE)
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)](https://riteofrenaissance.github.io/riteofrenaissance/)
 
 **A philosophical framework and practical toolkit for conscious existence in the age of uncertainty.**
 
