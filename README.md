@@ -25,7 +25,7 @@ The project offers accessible protocols for individuals seeking to develop resil
 ### 1. **Safe Aperture Simulation**
 An interactive web-based training program for developing ambiguity tolerance through graduated exposure.
 
-**🔗 Access:** [Safe Aperture Platform](https://riteofrenaissance.github.io/riteofrenaissance/safe_aperture_simulation.html)
+**🔗 Access:** [Safe Aperture Platform](https://riteofrenaissance.github.io/safe-aperture-study/)
 
 **Features:**
 - 5 progressive levels (everyday → existential ambiguity)
@@ -66,7 +66,7 @@ Structured practices for engaging with uncertainty:
 ## 📚 Documentation
 
 ### Quick Start
-1. Visit the [Safe Aperture Simulation](https://riteofrenaissance.github.io/riteofrenaissance/safe_aperture_simulation.html)
+1. Visit the [Safe Aperture Simulation](https://riteofrenaissance.github.io/safe-aperture-study/)
 2. Start with Level 1 (10 minutes)
 3. Progress at your own pace
 4. Use Emergency Exit if needed
@@ -101,7 +101,7 @@ Safe Aperture is currently undergoing rigorous empirical testing.
 - **Status:** IRB submission in progress
 
 **📁 Study Repository:**
-[riteofrenaissance/safe-aperture-study](https://github.com/riteofrenaissance/safe-aperture-study)
+[riteofrenaissance/safe-aperture-study](https://riteofrenaissance.github.io/safe-aperture-study/)
 
 **📖 Study DOI:**
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17396753.svg)](https://doi.org/10.5281/zenodo.17396753)
@@ -188,7 +188,7 @@ We welcome contributions:
 - **Research:** Collaborate on validation studies
 - **Feedback:** Report bugs or user experience issues
 
-**Contact:** riteofrenaissance@gmail.com
+**Contact:** riteofrenaissance@proton.me
 
 ---
 
@@ -221,11 +221,11 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🔗 Links
 
-- **Live Platform:** [https://riteofrenaissance.github.io/riteofrenaissance/](https://riteofrenaissance.github.io/riteofrenaissance/)
+- **Live Platform:** [https://riteofrenaissance.github.io/safe-aperture-study/](https://riteofrenaissance.github.io/safe-aperture-study/)
 - **Safe Aperture:** [Simulation Link](https://riteofrenaissance.github.io/riteofrenaissance/safe_aperture_simulation.html)
 - **Research Study:** [GitHub Repo](https://github.com/riteofrenaissance/safe-aperture-study)
 - **DOI:** [10.5281/zenodo.17172637](https://doi.org/10.5281/zenodo.17172637)
-- **Contact:** riteofrenaissance@gmail.com
+- **Contact:** riteofrenaissance@proton.me
 
 ---
 
@@ -254,7 +254,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 Join the conversation:
 - **GitHub Discussions:** [Link when enabled]
-- **Email Updates:** riteofrenaissance@gmail.com
+- **Email Updates:** riteofrenaissance@proton.me
 - **Research Participation:** See [study repo](https://github.com/riteofrenaissance/safe-aperture-study)
 
 ---
