@@ -33,13 +33,6 @@ An interactive web-based training program for developing ambiguity tolerance thr
 - Self-paced, accessible anywhere
 - No login required
 
-## Related Projects
-
-- **[ecf-compass](https://github.com/riteofrenaissance/ecf-compass)** 🧭 - Interactive assessment tool
-- **[ecf-dashboard](https://github.com/riteofrenaissance/ecf-dashboard)** - Long-term monitoring
-- **[ecf-study-aperture](https://github.com/riteofrenaissance/ecf-study-aperture)** - RCT research
-- **[ecf-study-interactions](https://github.com/riteofrenaissance/ecf-study-interactions)** - Pattern analysis
-  
 **Use Cases:**
 - Personal development
 - Anxiety management
@@ -232,6 +225,14 @@ This project is licensed under the [MIT License](LICENSE).
 - **Safe Aperture:** [Simulation Link](https://riteofrenaissance.github.io/riteofrenaissance/safe_aperture_simulation.html)
 - **Research Study:** [GitHub Repo](https://github.com/riteofrenaissance/safe-aperture-study)
 - **DOI:** [10.5281/zenodo.17172637](https://doi.org/10.5281/zenodo.17172637)
+
+## Related Projects
+
+- **[ecf-compass](https://github.com/riteofrenaissance/ecf-compass)** 🧭 - Interactive assessment tool
+- **[ecf-dashboard](https://github.com/riteofrenaissance/ecf-dashboard)** - Long-term monitoring
+- **[ecf-study-aperture](https://github.com/riteofrenaissance/ecf-study-aperture)** - RCT research
+- **[ecf-study-interactions](https://github.com/riteofrenaissance/ecf-study-interactions)** - Pattern analysis
+  
 - **Contact:** riteofrenaissance@proton.me
 
 ---
