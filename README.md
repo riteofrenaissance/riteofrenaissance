@@ -33,6 +33,13 @@ An interactive web-based training program for developing ambiguity tolerance thr
 - Self-paced, accessible anywhere
 - No login required
 
+## Related Projects
+
+- **[ecf-compass](https://github.com/riteofrenaissance/ecf-compass)** 🧭 - Interactive assessment tool
+- **[ecf-dashboard](https://github.com/riteofrenaissance/ecf-dashboard)** - Long-term monitoring
+- **[ecf-study-aperture](https://github.com/riteofrenaissance/ecf-study-aperture)** - RCT research
+- **[ecf-study-interactions](https://github.com/riteofrenaissance/ecf-study-interactions)** - Pattern analysis
+  
 **Use Cases:**
 - Personal development
 - Anxiety management
